@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+@@include('html/head.html',{ "title":"MAG 777" })
+
+<!-- .disable-scroll -->
+
+<body class="">
+    @@include('html/components/loader.html')
+    <div id="turn" class="turn">
+        Please rotate your device<br />for best experience
+        <br />
+        <br />
+        <!-- <img src="" alt class="turn-logo" /> -->
+    </div>
+    @@include('html/components/header.html')
+
+    <main class="main">
+        @@include('html/sections/intro.html')
+        <!-- @@include('html/sections/masterplan.html') -->
+        @@include('html/sections/footer.html')
+    </main>
+
+    @@include('html/popups/developer.html')
+    @@include('html/popups/brochure.html') @@include('html/popups/payment.html')
+    @@include('html/popups/privacy.html') @@include('html/popups/offer.html')
+    @@include('html/popups/popup.html') @@include('html/sections/modal360.html')
+
+    <script src="js/app.min.js"></script>
+    <script type="module" src="https://fnst.axflare.com/landings/global-script/landings-global-script.js"></script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] =
+                m[i] ||
+                function () {
+                    (m[i].a = m[i].a || []).push(arguments);
+                };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) {
+                if (document.scripts[j].src === r) {
+                    return;
+                }
+            }
+            (k = e.createElement(t)),
+                (a = e.getElementsByTagName(t)[0]),
+                (k.async = 1),
+                (k.src = r),
+                a.parentNode.insertBefore(k, a);
+        })(
+            window,
+            document,
+            "script",
+            "https://mc.yandex.ru/metrika/tag.js",
+            "ym"
+        );
+
+        ym(96202537, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true,
+        });
+    </script>
+    <noscript>
+        <div>
+            <img src="https://mc.yandex.ru/watch/96202537" style="position: absolute; left: -9999px" alt="" />
+        </div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+</body>
+
+</html>
