@@ -246,5 +246,76 @@ export function masterplan() {
         });
     }
 
+    const dropdown = document.querySelector('.masterplan__dropdown');
+    const dropbtn = dropdown.querySelector('.masterplan__dropdown-btn');
+    const dropdownContent = dropdown.querySelector('.masterplan__dropdown-list');
+    const dropdownItems = dropdown.querySelectorAll('.masterplan__dropdown-item');
+    const dropdownBg = dropdown.querySelector('.masterplan__dropdown-item__bg');
+    const dropdownItemAll = dropdown.querySelector('.masterplan__dropdown-item[data-value="all"]');
+    const svgDots = document.querySelectorAll('.masterplan__dot-ext');
+
+    // Инициализация
+    dropdownItemAll.classList.add('hidden');
+    dropdownBg.style.top = '0px';
+    dropdownBg.style.opacity = '0';
+
+    const toggleDropdown = (show) => {
+        dropdownContent.classList.toggle('active', show);
+        dropdown.classList.toggle('active', show);
+    };
+
+    const setDropdownBg = (item, show) => {
+        dropdownBg.style.top = `${item.offsetTop}px`;
+        dropdownBg.style.opacity = show ? '1' : '0';
+    };
+
+    const filterDots = (selectedItemValue) => {
+        svgDots.forEach(dot => {
+            const dotCategory = dot.dataset.category;
+            dot.style.opacity = (selectedItemValue === 'all' || dotCategory === selectedItemValue) ? '1' : '0';
+        });
+    };
+
+    const handleItemClick = (item) => {
+        const selectedItemValue = item.dataset.value;
+
+        dropdownItems.forEach(dropdownItem => dropdownItem.classList.toggle('hidden', dropdownItem === item));
+        dropbtn.textContent = item.textContent;
+
+        if (selectedItemValue !== 'all') {
+            dropdownItemAll.classList.remove('hidden');
+        } else {
+            dropdownItems.forEach(dropdownItem => {
+                if (dropdownItem !== item && dropdownItem.dataset.value !== 'all') {
+                    dropdownItem.classList.remove('hidden');
+                }
+            });
+        }
+
+        filterDots(selectedItemValue);
+        toggleDropdown(false);
+    };
+
+    // Добавляем слушатели событий
+    dropdown.addEventListener('mouseenter', () => toggleDropdown(true));
+    dropdown.addEventListener('mouseleave', () => toggleDropdown(false));
+
+    dropdownItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            setDropdownBg(item, true);
+            item.classList.add('hover-active');
+        });
+        item.addEventListener('mouseleave', () => {
+            setDropdownBg(item, false);
+            item.classList.remove('hover-active');
+        });
+        item.addEventListener('click', () => handleItemClick(item));
+    });
+
+    window.addEventListener('click', (event) => {
+        if (!dropdown.contains(event.target) && event.target !== dropbtn) {
+            toggleDropdown(false);
+        }
+    });
 
 }

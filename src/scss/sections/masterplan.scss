@@ -7,7 +7,6 @@
   z-index: 3;
   transition: 0.2s ease;
 
-  
   // masterplan__wrapper
   &__wrapper {
   }
@@ -26,7 +25,7 @@
     color: #000;
     @include ralewaySemiBold;
 
-    @include lg  {
+    @include lg {
       font-size: 13px;
       line-height: 15px;
       gap: 17px;
@@ -53,16 +52,15 @@
     visibility: hidden;
     @include ralewaySemiBold;
 
-
     ._show & {
       opacity: 1;
       visibility: visible;
       transition: 0.3s ease 0s;
     }
-    @include lg  {
+    @include lg {
       display: none;
     }
-    @include sm{
+    @include sm {
       left: initial;
       left: 36px;
       bottom: 20px;
@@ -80,7 +78,6 @@
     visibility: hidden;
     @include ralewaySemiBold;
 
-
     ._show & {
       opacity: 1;
       visibility: visible;
@@ -89,12 +86,12 @@
 
     .masterplan__btn-icon {
       position: relative;
-      @include lg  {
+      @include lg {
         width: 23px;
         height: 23px;
       }
       svg {
-        @include lg  {
+        @include lg {
           width: 23px;
           height: 23px;
         }
@@ -109,7 +106,7 @@
       }
     }
 
-    @include lg  {
+    @include lg {
       padding: 8px 10px 8px 5px;
       width: auto;
       right: 10px;
@@ -143,7 +140,7 @@
     visibility: hidden;
     z-index: 1124;
 
-    @include lg  {
+    @include lg {
     }
     ._show & {
       opacity: 1;
@@ -174,7 +171,7 @@
       pointer-events: none;
     }
 
-    @include lg  {
+    @include lg {
       font-size: 14px;
       left: 10px;
       top: initial;
@@ -263,72 +260,12 @@
     }
   }
 
-  // masterplan__list
-  &__list {
-    background: linear-gradient(0deg, #191919, #191919),
-      linear-gradient(
-        270deg,
-        rgba(255, 255, 255, 0.2) 0%,
-        rgba(255, 255, 255, 0) 60.12%
-      );
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    padding: 16px 23px;
-    width: auto;
-    position: absolute;
-    bottom: 100px;
-    right: 2%;
-    z-index: 1122;
-    opacity: 0;
-    visibility: hidden;
-    @include lg  {
-      display: none;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border-radius: 10px;
-      padding: 1px;
-      background: linear-gradient(
-        86.49deg,
-        rgba(255, 255, 255, 0.4) 2.87%,
-        rgba(255, 255, 255, 0.0001) 42.97%,
-        rgba(255, 255, 255, 0.0001) 58.87%,
-        rgba(255, 255, 255, 0.1) 97.09%
-      );
-      -webkit-mask: linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-      -webkit-mask-composite: destination-out;
-      mask-composite: exclude;
-      pointer-events: none;
-    }
-
-    ._show & {
-      opacity: 1;
-      visibility: visible;
-      transition: 0.3s ease 0s;
-    }
-
-    &-text {
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 140%;
-      color: #ffffff;
-    }
-  }
 
   // masterplan__selector
   &__selector {
     position: absolute;
-    top: 50%;
+    top: 40%;
     right: 2%;
-    transform: translateY(-50%);
     background: linear-gradient(
         180deg,
         rgba(255, 255, 255, 0.1) 0%,
@@ -341,12 +278,12 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    padding: 17px 16px;
+    padding: 22px 16px;
 
     z-index: 1124;
     opacity: 0;
     visibility: hidden;
-    @include lg  {
+    @include lg {
       padding: 10px 15px;
       align-items: center;
       flex-direction: initial;
@@ -402,7 +339,7 @@
     text-align: center;
     text-transform: uppercase;
     color: #ffffff;
-    @include lg  {
+    @include lg {
       font-size: 12px;
       font-weight: 600;
       line-height: 15.26px;
@@ -413,14 +350,14 @@
   &__selector-container {
     position: relative;
     overflow: hidden;
-    margin-top: 15px;
+    // margin-top: 15px;
     width: 215px;
     height: 36px;
     border-radius: 28px;
     // background-color: #252525;
     background-color: #fff;
     transition: all 0s;
-    @include lg  {
+    @include lg {
       width: 60px;
       height: 30px;
       margin-top: 0;
@@ -437,7 +374,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include lg  {
+    @include lg {
       justify-content: center;
     }
     span {
@@ -446,7 +383,7 @@
       line-height: 100%;
       text-transform: uppercase;
       white-space: nowrap;
-      @include lg  {
+      @include lg {
         display: none;
       }
     }
@@ -479,7 +416,7 @@
     width: 215px;
     height: 50px;
     cursor: pointer;
-    @include lg  {
+    @include lg {
       padding: 0;
       width: 60px;
       // height: 30px;
@@ -524,6 +461,152 @@
       }
     }
   }
+
+  //masterplan__dropdown
+  &__dropdown {
+    position: absolute;
+    right: 2%;
+    top: 52%;
+    transform: translateY(0%);
+    width: 247px;
+    height: 72px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // padding: 18px 16px;
+    transition: all 0.5s ease;
+
+    z-index: 1124;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+      height: 190px;
+      transform: translateY(0%);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 10px;
+      padding: 1px;
+      background: linear-gradient(89.31deg, rgba(255, 255, 255, 0.4) 19.8%, rgba(255, 255, 255, 0) 59.32%, rgba(255, 255, 255, 0) 80.84%, rgba(255, 255, 255, 0.1) 119.86%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: destination-out;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .vr360 & {
+      opacity: 1;
+      visibility: visible;
+    }
+    .open-menu & {
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.2s ease 0s;
+    }
+
+    
+
+  }
+
+  //masterplan__dropdown-wrapper
+  &__dropdown-wrapper {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  //masterplan__dropdown-btn
+  &__dropdown-btn {
+    cursor: pointer;
+    width: 214px;
+    height: 37px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    color: #252525;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 15px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+  }
+
+  //masterplan__dropdown-list
+  &__dropdown-list {
+    width: 214px;
+    height: 0;
+    transition: all 0.3s ease;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    overflow: hidden;
+    transition-duration: 0s;
+
+    &.active {
+      height: auto;
+      opacity: 1;
+      transition: all 0.3s ease;
+      transition-delay: 0.2s;
+
+    }
+  }
+
+  //masterplan__dropdown-item__bg
+  &__dropdown-item__bg{
+    background-color: #fff;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    border-radius: 20px;
+    transition: top 0.3s ease, opacity 0s ease;
+    z-index: 0;
+    width: 214px;
+    height: 37px;
+    border-radius: 20px;
+  }
+
+  //masterplan__dropdown-item
+  &__dropdown-item {
+    position: relative;
+    border-radius: 20px;
+    width: 214px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    color: #fff;
+
+    &.hidden {
+      display: none;
+    }
+
+    &.hover-active {
+      color: #000;
+      transition-delay: 0.1s;
+
+    }
+
+  }
+  
+
+
 
   &._show &-btn {
     opacity: 1;
