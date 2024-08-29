@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+@@include('html/head.html',{ "title":"Studio 111" })
+<!-- disable-scroll -->
+
+<body class="">
+    <!-- @@include('html/components/loader.html') -->
+    <div id="turn" class="turn">
+        Please rotate your device<br />for best experienc
+        <br />
+        <br />
+    </div>
+    <main>
+        <div class="viewer active-ext-slides">
+            <div class="viewer__wrapper">
+                <div class="viewer__bottom">
+                    <div class="viewer__nav">
+                        <div class="viewer__swiper">
+                            <div class="swiper-button-prev">
+                                <svg width="10" height="17" viewBox="0 0 10 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 16L1 8.5L9 1" stroke="white" />
+                                </svg>
+                            </div>
+                            <div class="swiper viewer-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide int"
+                                        data-src="https://d3b6muno9lbfvx.cloudfront.net/mag777/files/modal-360-img/img/studio-111/360/VR_111_002.jpg">
+                                        <img loading="lazy"
+                                            src="https://d3b6muno9lbfvx.cloudfront.net/mag777/files/modal-360-img/img/studio-111/360/VR_111_002.jpg"
+                                            alt="photo" />
+                                        <div class="swiper-slide-text">Interior 360</div>
+                                    </div>
+
+                                    <div class="swiper-slide int"
+                                        data-src="https://d3b6muno9lbfvx.cloudfront.net/mag777/files/modal-360-img/img/studio-111/360/VR_111_001.jpg">
+                                        <img loading="lazy"
+                                            src="https://d3b6muno9lbfvx.cloudfront.net/mag777/files/modal-360-img/img/studio-111/360/VR_111_001.jpg"
+                                            alt="photo" />
+                                        <div class="swiper-slide-text">Interior 360</div>
+                                    </div>
+
+                                    <div class="swiper-slide int"
+                                        data-src="https://d3b6muno9lbfvx.cloudfront.net/mag777/files/modal-360-img/img/studio-111/360/VR_111_003.jpg">
+                                        <img loading="lazy"
+                                            src="https://d3b6muno9lbfvx.cloudfront.net/mag777/files/modal-360-img/img/studio-111/360/VR_111_003.jpg"
+                                            alt="photo" />
+                                        <div class="swiper-slide-text">Interior 360</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next">
+                                <svg width="10" height="17" viewBox="0 0 10 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L9 8.5L0.999999 16" stroke="white" />
+                                </svg>
+                            </div>
+                        </div>
+                        @@include('./html/sections/viewer_parts/btns.html')
+                    </div>
+                </div>
+            </div>
+            @@include('./html/sections/viewer_parts/fake_fullscreen.html')
+            @@include('./html/sections/viewer_parts/nav-int.html')
+        </div>
+    </main>
+    <div class="gallery">
+        @@loop('html/sections/gallery/index.html', 'html/sections/gallery/1-bedroom-L1.json')
+    </div>
+    @@include('html/sections/popups/info_popup.html', {"subtitle": "MAG 777", "title": "Where Elegance Meets Modernity", "text1": "Every space within MAG 777 reflects a harmonious blend of contemporary aesthetics and refined taste, creating an atmosphere of unparalleled comfort and style.", "text2":"The panoramic vistas complement the serene ambiance, making MAG 777 a remarkable choice for those seeking a perfect balance of beauty, sophistication, and modern living."})
+    
+    <div id="floorplan-popup" class="popup floorplan-popup">
+        <div data-close class="popup__close"></div>
+        <div class="popup__wrapper">
+            <button data-close type="button" class="popup__btn-close popup__btn-close-second">
+                <svg width="30" height="60" viewBox="0 0 30 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M30 60C26.0603 60 22.1593 59.224 18.5195 57.7164C14.8797 56.2087 11.5725 53.999 8.78679 51.2132C6.00103 48.4274 3.79125 45.1203 2.28361 41.4805C0.775969 37.8407 -3.3909e-06 33.9397 -3.21869e-06 30C-3.04648e-06 26.0603 0.775969 22.1593 2.28361 18.5195C3.79125 14.8797 6.00104 11.5726 8.78679 8.78679C11.5726 6.00104 14.8797 3.79125 18.5195 2.28361C22.1593 0.775972 26.0603 -5.16623e-07 30 0L30 60Z"
+                        fill="#F3F2EF"></path>
+                    <path
+                        d="M16.9375 37.0002L15.6833 35.7461L21.4583 29.9711L15.6833 24.1961L16.9375 22.9419L23.9667 29.9711L16.9375 37.0002Z"
+                        fill="black"></path>
+                </svg>
+            </button>
+            <button data-close type="button" class="popup__btn-close popup__btn-close-first">
+                <svg width="21" height="21" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M1.84615 24L0 22.1538L10.1538 12L0 1.84615L1.84615 0L12 10.1538L22.1538 0L24 1.84615L13.8462 12L24 22.1538L22.1538 24L12 13.8462L1.84615 24Z"
+                        fill="black" />
+                </svg>
+            </button>
+            <div class="popup__container">
+                <div class="popup__content">
+                    <div class="popup__top">
+                        <div class="popup__tabs-btns">
+                            <button class="popup__tab-btn" type="button" data-tab="Tab1">
+                                <p>Floor 1</p>
+                            </button>
+                            <button class="popup__tab-btn" type="button" data-tab="Tab2">
+                                <p>Floor 2</p>
+                            </button>
+                        </div>
+                        <div class="popup__tab-wrapper">
+                            <div class="popup__tab" id="Tab1">
+                                <div class="popup__tab-body">
+                                    <div class="popup__swiper-main">
+                                        <div class="popup__swiper swiper">
+                                            <div class="popup__popup__swiper-wrapper swiper-wrapper">
+                                                <div class="popup__swiper-slide swiper-slide">
+                                                    <div class="popup__tab-even">
+                                                        <div class="popup__tab-img">
+                                                            <a data-fancybox=""
+                                                                href="https://d3b6muno9lbfvx.cloudfront.net/damac-bay-vr/files/floorplans/DB1-bedroom1-L.png">
+                                                                <img src="https://d3b6muno9lbfvx.cloudfront.net/damac-bay-vr/files/floorplans/DB1-bedroom1-L.png"
+                                                                    alt="" />
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="popup__swiper-slide swiper-slide">
+                                                    <div class="popup__tab-even">
+                                                        <div class="popup__tab-img">
+                                                            <a data-fancybox=""
+                                                                href="https://d3b6muno9lbfvx.cloudfront.net/damac-bay-vr/files/floorplans/DB1-bedroom3-L.png">
+                                                                <img src="https://d3b6muno9lbfvx.cloudfront.net/damac-bay-vr/files/floorplans/DB1-bedroom3-L.png"
+                                                                    alt="" />
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="popup__swiper-pagination swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                    <div class="popup__swiper-thumb">
+                                        <div class="popup__swiper swiper">
+                                            <div class="popup__swiper-wrapper swiper-wrapper">
+                                                <div class="popup__swiper-slide swiper-slide">
+                                                    <div class="popup__tab-odd">
+                                                        <div class="popup__tab-title">
+                                                            <h3>Type “A”</h3>
+                                                        </div>
+                                                        <div class="popup__tab-list">
+                                                            <div class="popup__tab-item">
+                                                                <div class="popup__tab-name">Bathroom</div>
+                                                                <div class="popup__tab-desc">1</div>
+                                                            </div>
+                                                            <div class="popup__tab-item">
+                                                                <div class="popup__tab-name">Total Area</div>
+                                                                <div class="popup__tab-desc">66.70 SQ. M. / 718 SQ. FT.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="popup__swiper-slide swiper-slide">
+                                                    <div class="popup__tab-odd">
+                                                        <div class="popup__tab-title">
+                                                            <h3>Type “A”</h3>
+                                                        </div>
+                                                        <div class="popup__tab-list">
+                                                            <div class="popup__tab-item">
+                                                                <div class="popup__tab-name">Bathroom</div>
+                                                                <div class="popup__tab-desc">1</div>
+                                                            </div>
+                                                            <div class="popup__tab-item">
+                                                                <div class="popup__tab-name">Total Area</div>
+                                                                <div class="popup__tab-desc">66.70 SQ. M. / 718 SQ. FT.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popup__tab" id="Tab2">
+                                <div class="popup__tab-body">
+                                    <div class="popup__swiper-main">
+                                        <div class="popup__swiper swiper">
+                                            <div class="popup__swiper-wrapper swiper-wrapper">
+                                                <div class="popup__swiper-slide swiper-slide">
+                                                    <div class="popup__tab-even">
+                                                        <div class="popup__tab-img">
+                                                            <a data-fancybox=""
+                                                                href="https://d3b6muno9lbfvx.cloudfront.net/damac-bay-vr/files/floorplans/DB1-bedroom3-SL-1.png">
+                                                                <img src="https://d3b6muno9lbfvx.cloudfront.net/damac-bay-vr/files/floorplans/DB1-bedroom3-SL-1.png"
+                                                                    alt="" />
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="popup__swiper-slide swiper-slide">
+                                                    <div class="popup__tab-even">
+                                                        <div class="popup__tab-img">
+                                                            <a data-fancybox=""
+                                                                href="https://d3b6muno9lbfvx.cloudfront.net/damac-bay-vr/files/floorplans/DB1-bedroom3-SL-2.png">
+                                                                <img src="https://d3b6muno9lbfvx.cloudfront.net/damac-bay-vr/files/floorplans/DB1-bedroom3-SL-2.png"
+                                                                    alt="" />
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="popup__swiper-pagination swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                    <div class="popup__swiper-thumb">
+                                        <div class="popup__swiper swiper">
+                                            <div class="popup__swiper-wrapper swiper-wrapper">
+                                                <div class="popup__swiper-slide swiper-slide">
+                                                    <div class="popup__tab-odd">
+                                                        <div class="popup__tab-title">
+                                                            <h3>Type “B”</h3>
+                                                        </div>
+                                                        <div class="popup__tab-list">
+                                                            <div class="popup__tab-item">
+                                                                <div class="popup__tab-name">Bathroom</div>
+                                                                <div class="popup__tab-desc">1</div>
+                                                            </div>
+                                                            <div class="popup__tab-item">
+                                                                <div class="popup__tab-name">Total Area</div>
+                                                                <div class="popup__tab-desc">66.70 SQ. M. / 718 SQ. FT.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="popup__swiper-slide swiper-slide">
+                                                    <div class="popup__tab-odd">
+                                                        <div class="popup__tab-title">
+                                                            <h3>Type “B”</h3>
+                                                        </div>
+                                                        <div class="popup__tab-list">
+                                                            <div class="popup__tab-item">
+                                                                <div class="popup__tab-name">Bathroom</div>
+                                                                <div class="popup__tab-desc">1</div>
+                                                            </div>
+                                                            <div class="popup__tab-item">
+                                                                <div class="popup__tab-name">Total Area</div>
+                                                                <div class="popup__tab-desc">66.70 SQ. M. / 718 SQ. FT.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup__bottom">
+                        <h3 class="popup__title">Maximize your investments:</h3>
+                        <div class="popup__text">
+                            <p>Expert insights and analysis on the top investment strategies</p>
+                        </div>
+    
+                        <form action="" onsubmit="ym(96589463,'reachgoal','form')" class="popup__form"
+                            data-gtag-submit="form">
+                            <div class="popup__form-input">
+                                <input type="text" id="infoName" name="name" placeholder="Your name" required />
+                            </div>
+                            <div class="popup__form-input">
+                                <input type="email" id="infoEmail" name="email" placeholder="Your e-mail" required />
+                            </div>
+                            <div class="popup__form-input">
+                                <input type="tel" id="infoNumber" name="phone" placeholder="Phone number" required />
+                            </div>
+                            <button type="submit" class="popup__form-btn">
+                                <span> Get a call back </span>
+                                <svg width="49" height="8" viewBox="0 0 49 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M44.9125 7.35664L44.1063 6.56914L46.0938 4.58164H0V3.45664H46.1125L44.125 1.46914L44.9125 0.681641L48.25 4.01914L44.9125 7.35664Z"
+                                        fill="black"></path>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three/build/three.module.js",
+          "@photo-sphere-viewer/core": "https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.module.js"
+        }
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/gyroscope-plugin@5.0.2/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/visible-range-plugin@5.1.6/index.min.js"></script>
+    <script src="js/app.min.js"></script>
+    <script>
+        document.documentElement.className = "js";
+        var supportsCssVars = function () {
+            var e,
+                t = document.createElement("style");
+            return (
+                (t.innerHTML = "root: { --tmp-var: bold; }"),
+                document.head.appendChild(t),
+                (e = !!(
+                    window.CSS &&
+                    window.CSS.supports &&
+                    window.CSS.supports("font-weight", "var(--tmp-var)")
+                )),
+                t.parentNode.removeChild(t),
+                e
+            );
+        };
+        supportsCssVars() ||
+            alert(
+                "Please view this site in a modern browser that supports CSS Variables."
+            );
+    </script>
+    <script type="module" src="https://fnst.axflare.com/landings/global-script/landings-global-script.js"></script>
+</body>
+
+</html>
