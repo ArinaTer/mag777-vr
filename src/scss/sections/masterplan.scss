@@ -263,6 +263,7 @@
 
   // masterplan__selector
   &__selector {
+
     position: absolute;
     top: 40%;
     right: 2%;
@@ -283,6 +284,9 @@
     z-index: 1124;
     opacity: 0;
     visibility: hidden;
+
+    display: none;
+
     @include lg {
       padding: 10px 15px;
       align-items: center;
@@ -291,9 +295,9 @@
       gap: 17px;
       bottom: initial;
       top: 80px;
-      left: 50%;
-      transform: translate(-50%, 0);
-      width: 212px;
+      left: 2%;
+      transform: translate(0, 0);
+      width: 100px;
       height: 50px;
       cursor: pointer;
     }
@@ -465,8 +469,8 @@
   //masterplan__dropdown
   &__dropdown {
     position: absolute;
-    right: 2%;
-    top: 52%;
+    left: 2%;
+    top: 50%;
     transform: translateY(0%);
     width: 247px;
     height: 72px;
@@ -483,10 +487,23 @@
     z-index: 1124;
     opacity: 0;
     visibility: hidden;
+    @include lg {
+      width: 177px;
+      height: 50px;
+      top: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+
+    }
 
     &.active {
       height: 190px;
       transform: translateY(0%);
+      @include lg {
+        height: 150px;
+        transform: translateX(-50%);
+
+      }
     }
 
     &::before {
@@ -526,6 +543,12 @@
     top: 18px;
     left: 50%;
     transform: translateX(-50%);
+    @include lg {
+      top: 9px;
+      left: 15px;
+      transform: initial;
+      height: 30px;
+    }
   }
 
   //masterplan__dropdown-btn
@@ -542,6 +565,11 @@
     text-transform: uppercase;
     position: relative;
     z-index: 1;
+    @include lg {
+      width: 120px;
+      height: 30px;
+      font-size: 10px;
+    }
   }
 
   //masterplan__dropdown-list
@@ -557,7 +585,9 @@
     margin-top: 10px;
     overflow: hidden;
     transition-duration: 0s;
-
+    @include lg {
+      width: 120px;
+    }
     &.active {
       height: auto;
       opacity: 1;
@@ -579,6 +609,10 @@
     width: 214px;
     height: 37px;
     border-radius: 20px;
+    @include lg {
+      width: 120px;
+      height: 30px;
+    }
   }
 
   //masterplan__dropdown-item
@@ -592,6 +626,11 @@
     align-items: center;
     transition: all 0.3s ease;
     color: #fff;
+    @include lg {
+      font-size: 10px;
+      width: 120px;
+      height: 30px;
+    }
 
     &.hidden {
       display: none;
@@ -605,6 +644,21 @@
 
   }
   
+  ////masterplan__dropdown-arrow
+  &__dropdown-arrow {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    // transition: transform 0.6s;
+    @include lg {
+      display: block;
+    }
+
+    .active & {
+      transform: rotate(-180deg);
+    }
+  }
 
 
 
@@ -639,17 +693,17 @@
       padding-bottom: calc(var(--aspect-ratio) * 1%);
       width: max(calc(var(--aspect-ratio-width) * 3.2 * 1%), 100%);
 
-      &-desc {
-        display: none;
-      }
+      // &-desc {
+      //   display: none;
+      // }
     }
-    &-mob {
-      display: none;
+    // &-mob {
+    //   display: none;
 
-      @media (max-width: 575.98px) {
-        display: block;
-      }
-    }
+    //   @media (max-width: 575.98px) {
+    //     display: block;
+    //   }
+    // }
   }
 
   &__svg-dot-int {

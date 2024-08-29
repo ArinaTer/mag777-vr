@@ -97,7 +97,7 @@ export function masterplan() {
     });
 
     mm.add('(max-width: 575px)', () => {
-        gsap.set(".masterplan__media", { xPercent: -29 });
+        gsap.set(".masterplan__media", { xPercent: -50 });
     });
 
 
@@ -248,11 +248,12 @@ export function masterplan() {
 
     const dropdown = document.querySelector('.masterplan__dropdown');
     const dropbtn = dropdown.querySelector('.masterplan__dropdown-btn');
+    const dropArrow = dropdown.querySelector('.masterplan__dropdown-arrow');
     const dropdownContent = dropdown.querySelector('.masterplan__dropdown-list');
     const dropdownItems = dropdown.querySelectorAll('.masterplan__dropdown-item');
     const dropdownBg = dropdown.querySelector('.masterplan__dropdown-item__bg');
     const dropdownItemAll = dropdown.querySelector('.masterplan__dropdown-item[data-value="all"]');
-    const svgDots = document.querySelectorAll('.masterplan__dot-ext');
+    const svgDots = document.querySelectorAll('.masterplan__dot-int');
 
     // Инициализация
     dropdownItemAll.classList.add('hidden');
@@ -262,6 +263,11 @@ export function masterplan() {
     const toggleDropdown = (show) => {
         dropdownContent.classList.toggle('active', show);
         dropdown.classList.toggle('active', show);
+
+        // Сброс top для dropdownBg, когда dropdown закрывается
+        if (!show) {
+            dropdownBg.style.top = '0px';
+        }
     };
 
     const setDropdownBg = (item, show) => {
@@ -279,7 +285,12 @@ export function masterplan() {
     const handleItemClick = (item) => {
         const selectedItemValue = item.dataset.value;
 
+        // Удаление класса hover-active со всех элементов
+        dropdownItems.forEach(dropdownItem => dropdownItem.classList.remove('hover-active'));
+
+        // Удаление класса hidden со всех элементов, кроме выбранного
         dropdownItems.forEach(dropdownItem => dropdownItem.classList.toggle('hidden', dropdownItem === item));
+
         dropbtn.textContent = item.textContent;
 
         if (selectedItemValue !== 'all') {
@@ -296,26 +307,53 @@ export function masterplan() {
         toggleDropdown(false);
     };
 
-    // Добавляем слушатели событий
-    dropdown.addEventListener('mouseenter', () => toggleDropdown(true));
-    dropdown.addEventListener('mouseleave', () => toggleDropdown(false));
+    // Проверка на мобильное устройство
+    const isMobile = window.matchMedia('(max-width: 993.98px)').matches;
 
-    dropdownItems.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            setDropdownBg(item, true);
-            item.classList.add('hover-active');
+    if (isMobile) {
+        // Мобильные устройства - использование кликов вместо hover
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', (event) => {
+                setDropdownBg(item, true);
+                handleItemClick(item);
+                event.stopPropagation();
+            });
         });
-        item.addEventListener('mouseleave', () => {
-            setDropdownBg(item, false);
-            item.classList.remove('hover-active');
+        // Показ и скрытие дропдауна по клику на кнопку
+        dropbtn.addEventListener('click', (event) => {
+            const isActive = dropdownContent.classList.contains('active');
+            toggleDropdown(!isActive);
+            event.stopPropagation();
         });
-        item.addEventListener('click', () => handleItemClick(item));
-    });
 
-    window.addEventListener('click', (event) => {
-        if (!dropdown.contains(event.target) && event.target !== dropbtn) {
+        dropArrow.addEventListener('click', (event) => {
+            const isActive =dropdownContent.classList.contains('active');
+            toggleDropdown(!isActive);
+            event.stopPropagation();
+        })
+
+        // Закрытие дропдауна при клике вне его области
+        window.addEventListener('click', () => {
             toggleDropdown(false);
-        }
-    });
+            dropdownBg.style.top = '0px'; // Сброс top при закрытии
+        });
+
+    } else {
+        // Для десктопа - стандартные обработчики событий
+        dropdown.addEventListener('mouseenter', () => toggleDropdown(true));
+        dropdown.addEventListener('mouseleave', () => toggleDropdown(false));
+
+        dropdownItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                setDropdownBg(item, true);
+                item.classList.add('hover-active');
+            });
+            item.addEventListener('mouseleave', () => {
+                setDropdownBg(item, false);
+                item.classList.remove('hover-active');
+            });
+            item.addEventListener('click', () => handleItemClick(item));
+        });
+    }
 
 }
