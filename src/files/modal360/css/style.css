@@ -3274,6 +3274,7 @@ main {
   -webkit-transition: visibility 0.8s ease 0s;
   transition: visibility 0.8s ease 0s;
   visibility: hidden;
+  overflow: hidden;
   pointer-events: none;
   z-index: 150;
 }
@@ -3289,7 +3290,7 @@ main {
 
 .popup_show {
   visibility: visible;
-  overflow: auto;
+  overflow: hidden;
   pointer-events: auto;
 }
 
@@ -3553,7 +3554,7 @@ main {
   margin-bottom: 40px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  overflow-x: auto;
+  overflow: hidden;
 }
 
 .floorplan-popup .popup__wrapper {
@@ -3652,7 +3653,6 @@ main {
   position: relative;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  cursor: auto;
   white-space: nowrap;
 }
 
