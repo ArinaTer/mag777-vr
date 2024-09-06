@@ -260,10 +260,8 @@
     }
   }
 
-
   // masterplan__selector
   &__selector {
-
     position: absolute;
     top: 40%;
     right: 2%;
@@ -475,7 +473,11 @@
     width: 247px;
     height: 72px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -493,7 +495,6 @@
       top: 80px;
       left: 50%;
       transform: translateX(-50%);
-
     }
 
     &.active {
@@ -502,7 +503,6 @@
       @include lg {
         height: 150px;
         transform: translateX(-50%);
-
       }
     }
 
@@ -515,7 +515,13 @@
       bottom: 0;
       border-radius: 10px;
       padding: 1px;
-      background: linear-gradient(89.31deg, rgba(255, 255, 255, 0.4) 19.8%, rgba(255, 255, 255, 0) 59.32%, rgba(255, 255, 255, 0) 80.84%, rgba(255, 255, 255, 0.1) 119.86%);
+      background: linear-gradient(
+        89.31deg,
+        rgba(255, 255, 255, 0.4) 19.8%,
+        rgba(255, 255, 255, 0) 59.32%,
+        rgba(255, 255, 255, 0) 80.84%,
+        rgba(255, 255, 255, 0.1) 119.86%
+      );
       -webkit-mask: linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
       -webkit-mask-composite: destination-out;
@@ -532,9 +538,6 @@
       visibility: hidden;
       transition: 0.2s ease 0s;
     }
-
-    
-
   }
 
   //masterplan__dropdown-wrapper
@@ -556,7 +559,7 @@
     cursor: pointer;
     width: 214px;
     height: 37px;
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 20px;
     color: #252525;
     font-weight: 600;
@@ -593,12 +596,11 @@
       opacity: 1;
       transition: all 0.3s ease;
       transition-delay: 0.2s;
-
     }
   }
 
   //masterplan__dropdown-item__bg
-  &__dropdown-item__bg{
+  &__dropdown-item__bg {
     background-color: #fff;
     position: absolute;
     top: 0px;
@@ -639,11 +641,9 @@
     &.hover-active {
       color: #000;
       transition-delay: 0.1s;
-
     }
-
   }
-  
+
   ////masterplan__dropdown-arrow
   &__dropdown-arrow {
     display: none;
@@ -659,8 +659,6 @@
       transform: rotate(-180deg);
     }
   }
-
-
 
   &._show &-btn {
     opacity: 1;
