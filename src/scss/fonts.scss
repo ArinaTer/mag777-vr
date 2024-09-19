@@ -31,3 +31,36 @@
 @mixin ralewayMedium {
   font-family: "ralewayMedium", Arial, sans-serif;
 }
+
+
+//Fabriga
+@include font-face("fabrigaRegular", "../files/fonts/Fabriga/Fabriga-Regular");
+@include font-face("fabrigaBlack", "../files/fonts/Fabriga/Fabriga-Black");
+@include font-face("fabrigaBold", "../files/fonts/Fabriga/Fabriga-Bold");
+@include font-face("fabrigaMedium", "../files/fonts/Fabriga/FabrigaMedium-Regular");
+@include font-face("fabrigaLight", "../files/fonts/Fabriga/FabrigaLight-Regular");
+
+
+
+
+
+//Fabriga
+@mixin fabrigaRegular {
+  font-family: "fabrigaRegular", Arial, sans-serif;
+}
+
+@mixin fabrigaBlack {
+  font-family: "fabrigaBlack", Arial, sans-serif;
+}
+
+@mixin fabrigaBold {
+  font-family: "fabrigaBold", Arial, sans-serif;
+}
+
+@mixin fabrigaMedium {
+  font-family: "fabrigaMedium", Arial, sans-serif;
+}
+
+@mixin fabrigaLight {
+  font-family: "fabrigaLight", Arial, sans-serif;
+}

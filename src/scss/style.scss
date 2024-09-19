@@ -27,7 +27,7 @@ body {
   overflow: hidden;
   background-color: black;
   position: relative;
-  @include ralewayRegular;
+  @include fabrigaRegular;
 
   &::-webkit-scrollbar {
     -webkit-appearance: none;
