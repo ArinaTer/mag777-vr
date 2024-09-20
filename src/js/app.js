@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	window.scrollTo(0, 0);
 	loader();
 
-	header();
+	// header();
 	filter('studio');
 	masterplan();
 	global();
