@@ -139,7 +139,7 @@
       color: #fff;
       position: relative;
       font-variant-numeric: lining-nums proportional-nums;
-      @include ralewayMedium;
+      @include fabrigaMedium;
 
       &::after {
         content: "";
@@ -170,7 +170,7 @@
       font-size: 32px;
       line-height: 1;
       text-transform: uppercase;
-      @include ralewayMedium;
+      @include fabrigaMedium;
 
       @keyframes background-pan {
         from {
@@ -193,7 +193,7 @@
       line-height: 100%;
       text-transform: uppercase;
       color: #fff;
-      @include cinzelBold;
+      @include fabrigaBold;
       font-weight: 700;
       @include md {
         font-size: 48px;
@@ -210,7 +210,7 @@
       font-size: 18px;
       color: #fff;
       line-height: 1.2;
-      @include ralewayLight;
+      @include fabrigaLight;
       @include md {
         font-size: 14px;
       }
@@ -293,7 +293,7 @@
     color: #fff;
     font-size: 32px;
     line-height: 100%;
-    @include cinzelRegular;
+    @include fabrigaRegular;
     padding-bottom: 10px;
     @include md {
       font-size: 26px;
