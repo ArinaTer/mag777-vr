@@ -72,7 +72,7 @@
       );
       z-index: 1;
       @include md {
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 28.41%, rgba(0, 0, 0, 0.92) 88.56%);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 28.41%, rgba(0, 0, 0, 0.70) 88.56%);
       }
     }
 
@@ -110,7 +110,12 @@
       height: 100%;
       object-fit: cover;
       object-position: center 35%;
+      @media(max-width:768px){
+      height: 75%;
+      object-position: 44% 20%;
+      }
     }
+    
   }
 
   // .brochure-popup__bottom
