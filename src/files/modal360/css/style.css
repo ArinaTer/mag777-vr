@@ -2727,7 +2727,7 @@ body {
   left: 0;
   background: #000;
   z-index: 9999;
-  font-family: "Montserrat";
+  font-family: "Fabriga";
   text-transform: uppercase;
   color: #fff;
   width: 100vw;
@@ -3376,7 +3376,7 @@ main {
 }
 
 .popup__title {
-  font-family: "Fabriga", sans-serif;
+  font-family: "Cinzel", sans-serif;
   font-size: 35px;
   font-weight: 400;
   line-height: 1;
@@ -3551,14 +3551,13 @@ main {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px 30px;
-  margin-bottom: 40px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   overflow: hidden;
 }
 
 .floorplan-popup .popup__wrapper {
-  max-width: 740px;
+  max-width: 630px;
 }
 
 .floorplan-popup .popup__container {
@@ -3617,7 +3616,7 @@ main {
 }
 
 .floorplan-popup .popup__swiper-thumb {
-  width: 220px;
+  width: 280px;
 }
 
 .floorplan-popup .popup__tab-btn {
@@ -3644,7 +3643,7 @@ main {
 
 .floorplan-popup .popup__tab-btn p {
   color: #919191;
-  font-family: "Fabriga", sans-serif;
+  font-family: "Cinzel", sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: normal;
@@ -3714,7 +3713,7 @@ main {
 
 .floorplan-popup .popup__tab-title h3 {
   color: #333;
-  font-family: "Fabriga", sans-serif;
+  font-family: "Cinzel", sans-serif;
   font-size: 48.75px;
   font-weight: 400;
   line-height: 100%;
@@ -3741,7 +3740,7 @@ main {
 
 .floorplan-popup .popup__tab-desc {
   color: #000;
-  font-family: "Fabriga", sans-serif;
+  font-family: "Cinzel", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1;
@@ -4379,7 +4378,6 @@ main {
   }
 
   .floorplan-popup .popup__tabs-btns {
-    margin-bottom: 15px;
     padding-bottom: 15px;
   }
 }

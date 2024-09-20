@@ -158,7 +158,6 @@
 
   // .brochure-popup__title
   &__title {
-    @include fabrigaRegular;
     font-size: 96px;
     line-height: 1;
     text-transform: capitalize;
@@ -166,7 +165,8 @@
     padding-left: 30px;
     transition: all 0.5s;
     transition-delay: 0s;
-    @include fabrigaRegular;
+    @include cinzelRegular;
+    font-weight: 300;
     position: absolute;
     bottom: 65px;
     left: 65px;

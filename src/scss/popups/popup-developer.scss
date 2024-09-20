@@ -131,7 +131,8 @@
   &__title {
     overflow: hidden;
     h3 {
-      @include fabrigaRegular;
+      @include cinzelRegular;
+      font-weight: 300;
       font-size: 50px;
       line-height: normal;
       text-align: center;
@@ -390,7 +391,7 @@
   &__statis-num {
     color: #fff;
     text-align: center;
-    @include fabrigaRegular;
+    @include cinzelRegular;
     font-size: 50px;
     line-height: normal;
     @include xl {

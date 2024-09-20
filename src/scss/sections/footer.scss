@@ -97,7 +97,7 @@
     text-align: left;
     text-transform: uppercase;
     color: #ada08c;
-    @include fabrigaLight;
+    font-weight: 400;
     padding-bottom: 24px;
     @include md {
       font-size: 16px;
@@ -111,9 +111,10 @@
   // .footer__title
   &__title {
     color: #fff;
+    @include cinzelRegular;
     font-size: 64px;
     font-style: normal;
-    @include fabrigaRegular;
+    font-weight: 400;
     line-height: 100%;
     max-width: 722px;
     width: 100%;
@@ -147,7 +148,7 @@
   &__text {
     color: #86868b;
     font-size: 24px;
-    @include fabrigaMedium;
+    font-weight: 700;
     line-height: 120.932%;
     max-width: 679px;
     width: 100%;
@@ -328,7 +329,7 @@
     }
 
     input {
-      @include fabrigaRegular;
+      font-weight: 400;
       font-size: 16px;
       line-height: 1.2;
       color: rgba(255, 255, 255, 0.85);
@@ -371,7 +372,7 @@
     padding: 6px 30px;
     color: #000;
     font-size: 13px;
-    @include fabrigaLight;
+    font-weight: 300;
     line-height: 150%;
     letter-spacing: 0.42px;
     text-transform: uppercase;
@@ -495,7 +496,7 @@
   &__copyright {
     color: #919191;
     font-size: 14px;
-    @include fabrigaRegular;
+    font-weight: 400;
     line-height: 200%;
     letter-spacing: 0.42px;
     @include md {
@@ -510,7 +511,7 @@
     color: #919191;
     font-size: 14px;
     font-style: normal;
-    @include fabrigaRegular;
+    font-weight: 400;
     line-height: 200%;
     letter-spacing: 0.42px;
     @include md {
