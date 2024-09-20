@@ -367,13 +367,12 @@
 			display: none;
 			@include md {
 				display: flex;
-				// margin-top: 25px;
-				// align-self: flex-start;
-				// margin-bottom: 100px;
+				align-self: flex-start;
+				margin-bottom: 100px;
 			}
 			@media (max-width: 380px) {
-				// margin-bottom: 40px;
-				margin-top: 0;
+				margin-bottom: 40px;
+        margin-top: 25px;
 			}
 		}
 
