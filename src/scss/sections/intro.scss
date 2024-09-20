@@ -88,9 +88,27 @@
     display: flex;
     gap: 28px;
     align-items: center;
-    @include lg {
+    @include md {
       gap: 15px;
-      align-items: flex-start;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+  &__even {
+    @include md {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__odd {
+    @include md {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       flex-direction: column;
     }
   }
@@ -130,6 +148,9 @@
       position: relative;
       font-variant-numeric: lining-nums proportional-nums;
       @include fabrigaMedium;
+      @include md {
+        text-align: center;
+      }
 
       &::after {
         content: "";
@@ -161,6 +182,9 @@
       line-height: 1;
       text-transform: uppercase;
       @include fabrigaMedium;
+      @include md {
+        text-align: center;
+      }
 
       @keyframes background-pan {
         from {
@@ -187,6 +211,7 @@
       font-weight: 700;
       @include md {
         font-size: 48px;
+        text-align: center;
       }
     }
   }
@@ -203,6 +228,8 @@
       @include fabrigaLight;
       @include md {
         font-size: 14px;
+        text-align: center;
+
       }
     }
   }
@@ -226,6 +253,7 @@
       margin-left: -10%;
       width: calc(100% + 20%);
       padding: 13px 0;
+      justify-content: center;
       // margin-top: 0;
     }
 
@@ -274,7 +302,17 @@
     display: flex;
     gap: 44px;
     @include md {
-      padding-left: 10%;
+      justify-content: center;
+  }
+  }
+
+  &__statistic-item {
+    @include md {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
   }
 
@@ -287,6 +325,8 @@
     padding-bottom: 10px;
     @include md {
       font-size: 26px;
+      width: max-content;
+      text-align: center;
     }
   }
 
@@ -295,8 +335,11 @@
     font-size: 14px;
     color: #fff;
     line-height: 100%;
+    font-weight: 200;
+    // @include fabrigaLight;
     @include md {
       font-size: 12px;
+      width: max-content;
     }
   }
 
@@ -361,13 +404,11 @@
 			@include md {
 				display: flex;
 				align-self: flex-start;
-        margin-top: 25px;
-				margin-bottom: 100px;
+        margin: 25px auto 100px;
 			}
-			@media (max-width: 380px) {
-				margin-bottom: 40px;
-        margin-top: 25px;
-			}
+			// @media (max-width: 380px) {
+      //   margin: 40px auto 25px;
+			// }
 		}
 
     p {
@@ -396,7 +437,7 @@
     justify-content: center;
     align-items: center;
     @include md {
-      bottom: 120px;
+      bottom: 110px;
       z-index: 10;
     }
     p {
