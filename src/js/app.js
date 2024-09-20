@@ -16,6 +16,7 @@ import { global } from "./global.js";
 import { popups } from "./components/popups.js";
 import { slides } from "./components/slides.js";
 import { masterplan } from "./sections/masterplan.js";
+import filter from "./sections/filter.js";
 
 
 window.windowWidth = window.innerWidth;
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	loader();
 
 	header();
+	filter()
 	masterplan();
 	global();
 	popups();
