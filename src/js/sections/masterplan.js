@@ -166,89 +166,89 @@ export function masterplan() {
 
 
 
-    const fullBtn = document.querySelector(".masterplan__selector-btn-full");
-    const highlightBtn = document.querySelector(".masterplan__selector-btn-highlight");
-    const fullImg = document.querySelector(".masterplan__img-full");
-    const highlightImg = document.querySelector(".masterplan__img-highlight");
-    const btnContainer = document.querySelector(".masterplan__selector-container");
+    // const fullBtn = document.querySelector(".masterplan__selector-btn-full");
+    // const highlightBtn = document.querySelector(".masterplan__selector-btn-highlight");
+    // const fullImg = document.querySelector(".masterplan__img-full");
+    // const highlightImg = document.querySelector(".masterplan__img-highlight");
+    // const btnContainer = document.querySelector(".masterplan__selector-container");
 
-    let activeBtn = fullBtn;
+    // let activeBtn = fullBtn;
 
-    document.querySelector(".masterplan__selector-container").addEventListener("click", function (event) {
-        activeBtn.classList.remove("_active");
-        if (activeBtn === fullBtn) {
-            activeBtn = highlightBtn;
+    // document.querySelector(".masterplan__selector-container").addEventListener("click", function (event) {
+    //     activeBtn.classList.remove("_active");
+    //     if (activeBtn === fullBtn) {
+    //         activeBtn = highlightBtn;
 
-        } else {
-            activeBtn = fullBtn;
-
-
-        }
-        activeBtn.classList.add("_active");
-
-        if (activeBtn === fullBtn) {
-            fullImg.classList.add("_active");
-            highlightImg.classList.remove("_active");
-            masterplan.classList.add("_active-full");
-            masterplan.classList.remove("_active-highlight");
-            btnContainer.classList.remove("active-container");
+    //     } else {
+    //         activeBtn = fullBtn;
 
 
-        } else {
-            fullImg.classList.remove("_active");
-            highlightImg.classList.add("_active");
-            masterplan.classList.add("_active-highlight");
-            masterplan.classList.remove("_active-full");
-            btnContainer.classList.add("active-container");
-        }
-    });
+    //     }
+    //     activeBtn.classList.add("_active");
 
-    document.querySelector(".masterplan__back").addEventListener("click", function () {
-        btnContainer.classList.remove("active-container");
+    //     if (activeBtn === fullBtn) {
+    //         fullImg.classList.add("_active");
+    //         highlightImg.classList.remove("_active");
+    //         masterplan.classList.add("_active-full");
+    //         masterplan.classList.remove("_active-highlight");
+    //         btnContainer.classList.remove("active-container");
 
-        highlightBtn.classList.remove("_active");
-        highlightImg.classList.remove("_active");
-        masterplan.classList.remove("_active-highlight");
 
-        fullBtn.classList.add("_active");
-        fullImg.classList.add("_active");
-        masterplan.classList.add("_active-full");
+    //     } else {
+    //         fullImg.classList.remove("_active");
+    //         highlightImg.classList.add("_active");
+    //         masterplan.classList.add("_active-highlight");
+    //         masterplan.classList.remove("_active-full");
+    //         btnContainer.classList.add("active-container");
+    //     }
+    // });
 
-    });
+    // document.querySelector(".masterplan__back").addEventListener("click", function () {
+    //     btnContainer.classList.remove("active-container");
 
-    const selector = document.querySelector(".masterplan__selector");
-    const screenWidth = window.innerWidth;
+    //     highlightBtn.classList.remove("_active");
+    //     highlightImg.classList.remove("_active");
+    //     masterplan.classList.remove("_active-highlight");
 
-    if (screenWidth < 992) {
+    //     fullBtn.classList.add("_active");
+    //     fullImg.classList.add("_active");
+    //     masterplan.classList.add("_active-full");
 
-        selector.addEventListener("click", function () {
-            activeBtn.classList.remove("_active");
-            if (activeBtn === fullBtn) {
-                activeBtn = highlightBtn;
-            } else {
-                activeBtn = fullBtn;
-            }
-            activeBtn.classList.add("_active");
+    // });
 
-            if (activeBtn === fullBtn) {
-                fullImg.classList.add("_active");
-                highlightImg.classList.remove("_active");
-                masterplan.classList.add("_active-full");
-                masterplan.classList.remove("_active-highlight");
-                btnContainer.classList.remove("active-container");
-            } else {
-                fullImg.classList.remove("_active");
-                highlightImg.classList.add("_active");
-                masterplan.classList.add("_active-highlight");
-                masterplan.classList.remove("_active-full");
-                btnContainer.classList.add("active-container");
-            }
-        });
-    }
+    // const selector = document.querySelector(".masterplan__selector");
+    // const screenWidth = window.innerWidth;
 
-    const checkbox = document.querySelector('.masterplan__checkbox');
-    const checkboxItems = document.querySelectorAll('.masterplan__checkbox-item');
-    const svgDots = document.querySelectorAll('.masterplan__dot-int');
+    // if (screenWidth < 992) {
 
-    console.log(checkboxItems);
+    //     selector.addEventListener("click", function () {
+    //         activeBtn.classList.remove("_active");
+    //         if (activeBtn === fullBtn) {
+    //             activeBtn = highlightBtn;
+    //         } else {
+    //             activeBtn = fullBtn;
+    //         }
+    //         activeBtn.classList.add("_active");
+
+    //         if (activeBtn === fullBtn) {
+    //             fullImg.classList.add("_active");
+    //             highlightImg.classList.remove("_active");
+    //             masterplan.classList.add("_active-full");
+    //             masterplan.classList.remove("_active-highlight");
+    //             btnContainer.classList.remove("active-container");
+    //         } else {
+    //             fullImg.classList.remove("_active");
+    //             highlightImg.classList.add("_active");
+    //             masterplan.classList.add("_active-highlight");
+    //             masterplan.classList.remove("_active-full");
+    //             btnContainer.classList.add("active-container");
+    //         }
+    //     });
+    // }
+
+    // const checkbox = document.querySelector('.masterplan__checkbox');
+    // const checkboxItems = document.querySelectorAll('.masterplan__checkbox-item');
+    // const svgDots = document.querySelectorAll('.masterplan__dot-int');
+
+    // console.log(checkboxItems);
 }
