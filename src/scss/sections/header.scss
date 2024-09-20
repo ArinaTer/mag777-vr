@@ -78,7 +78,7 @@
 		max-width: 32px;
 		min-height: 24px;
 		@include sm {
-			max-width: 27px;
+			max-width: 32px;
 			min-height: 20px;
 		}
 
@@ -147,7 +147,7 @@
 		height: 30px;
 		align-items: center;
 		color: rgba(255, 255, 255, 1);
-		@include fabrigaLight;
+		@include fabrigaRegular;
 	}
 
 	// .header__phone
