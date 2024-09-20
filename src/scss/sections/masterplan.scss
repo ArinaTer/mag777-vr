@@ -70,7 +70,7 @@
   }
 
   &__btn-brochure {
-    width: 287px;
+    // width: 287px;
     padding: 6px 16px 6px 6px;
     position: absolute;
     bottom: 26px;
@@ -110,7 +110,7 @@
 
     @include lg {
       padding: 8px 10px 8px 5px;
-      width: auto;
+      // width: auto;
       right: 10px;
     }
   }
@@ -197,7 +197,7 @@
       background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
       transform: matrix(-1, 0, 0, 1, 0, 0);
       z-index: 2;
-      opacity: 0.7;
+      opacity: 0;
     }
 
     &::after {
@@ -209,8 +209,16 @@
       width: 100%;
       background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
       transform: matrix(1, 0, 0, -1, 0, 0);
-      opacity: 0.7;
       z-index: 2;
+
+      opacity: 0;
+      visibility: hidden;
+  
+      ._show & {
+        opacity: 1;
+        visibility: visible;
+        transition: 0.3s ease 0s;
+      }
     }
   }
 
@@ -534,6 +542,23 @@
       visibility: hidden;
       transition: 0.2s ease 0s;
     }
+
+    &::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border-radius: 10px;
+			padding: 1px;
+			background: linear-gradient(89.31deg, rgba(255, 255, 255, 0.4) 19.8%, rgba(255, 255, 255, 0) 59.32%, rgba(255, 255, 255, 0) 80.84%, rgba(255, 255, 255, 0.1) 119.86%);
+			-webkit-mask: linear-gradient(#fff 0 0) content-box,
+				linear-gradient(#fff 0 0);
+			-webkit-mask-composite: destination-out;
+			mask-composite: exclude;
+			pointer-events: none;
+		}
   }
 
   //masterplan__checkbox-list
@@ -749,7 +774,7 @@
   }
 
   .dot-line-left {
-    width: 80px;
+    width: 40px;
     pointer-events: none;
     svg {
       path {
@@ -759,7 +784,7 @@
     }
   }
   .dot-line-right {
-    width: 80px;
+    width: 40px;
     order: 1;
     pointer-events: none;
     svg {
