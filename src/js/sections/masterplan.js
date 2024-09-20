@@ -17,7 +17,8 @@ export function masterplan() {
             duration: 0.2,
             onComplete: function () {
                 gsap.set(masterplan, { className: 'masterplan _show' });
-                gsap.set(document.body, { className: 'vr360' });
+                // gsap.set(document.body, { className: 'vr360' });
+                document.body.classList.add('vr360')
                 // setTimeout(() => {
                 gsap.set(intro, { className: 'intro hidden' });
                 // }, 200);
@@ -30,7 +31,8 @@ export function masterplan() {
             onStart: function () {
                 gsap.set(intro, { className: 'intro' });
                 gsap.set(masterplan, { className: 'masterplan' });
-                gsap.set(document.body, { className: '' });
+                // gsap.set(document.body, { className: '' });
+                document.body.classList.remove('vr360')
             },
             yPercent: 0,
             opacity: 1,
