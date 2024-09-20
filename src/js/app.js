@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	loader();
 
 	header();
-	filter()
+	filter('studio');
 	masterplan();
 	global();
 	popups();
