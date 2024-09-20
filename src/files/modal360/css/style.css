@@ -1,6 +1,4 @@
-@import '../../fonts/Cinzel/stylesheet.css';
-
-@import '../../fonts/Raleway/stylesheet.css';
+@import '../../fonts/Fabriga/stylesheet.css';
 
 * {
   padding: 0px;
@@ -23,7 +21,7 @@ body {
 
 body {
   line-height: 1;
-  font-family: "Raleway";
+  font-family: "Fabriga";
   font-size: 14px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -35,7 +33,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Raleway";
+  font-family: "Fabriga";
   font-size: inherit;
 }
 
@@ -2727,7 +2725,7 @@ body {
   left: 0;
   background: #000;
   z-index: 9999;
-  font-family: "Montserrat";
+  font-family: "Fabriga";
   text-transform: uppercase;
   color: #fff;
   width: 100vw;
@@ -3376,7 +3374,7 @@ main {
 }
 
 .popup__title {
-  font-family: "Cinzel", sans-serif;
+  font-family: "Fabriga", sans-serif;
   font-size: 35px;
   font-weight: 400;
   line-height: 1;
@@ -3644,7 +3642,7 @@ main {
 
 .floorplan-popup .popup__tab-btn p {
   color: #919191;
-  font-family: "Cinzel", sans-serif;
+  font-family: "Fabriga", sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: normal;
@@ -3714,7 +3712,7 @@ main {
 
 .floorplan-popup .popup__tab-title h3 {
   color: #333;
-  font-family: "Cinzel", sans-serif;
+  font-family: "Fabriga", sans-serif;
   font-size: 48.75px;
   font-weight: 400;
   line-height: 100%;
@@ -3741,7 +3739,7 @@ main {
 
 .floorplan-popup .popup__tab-desc {
   color: #000;
-  font-family: "Cinzel", sans-serif;
+  font-family: "Fabriga", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1;

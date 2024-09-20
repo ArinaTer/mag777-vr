@@ -89,7 +89,7 @@
     color: #ada08c;
     text-align: center;
     font-size: 24px;
-    font-weight: 400;
+    @include fabrigaRegular;
     line-height: normal;
     text-transform: uppercase;
     @include md {
@@ -103,7 +103,6 @@
     color: #fff;
     text-align: center;
     font-size: 38px;
-    font-weight: 400;
     line-height: normal;
     text-transform: capitalize;
     @include fabrigaRegular;
@@ -206,7 +205,7 @@
       line-height: normal;
       color: #fff;
       text-align: center;
-      font-weight: 300;
+      @include fabrigaLight;
     }
 
     p {
@@ -215,7 +214,7 @@
       text-transform: uppercase;
       color: #cfcfcf;
       text-align: center;
-      font-weight: 300;
+      @include fabrigaLight;
     }
   }
 }

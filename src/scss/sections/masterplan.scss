@@ -125,8 +125,7 @@
     border-radius: 10px;
     background: linear-gradient(297.78deg, rgba(255, 255, 255, 0.2) -38.39%, rgba(255, 255, 255, 0) 49.49%), #191919;
     padding: 11.5px 57px;
-    font-weight: 400;
-    @include fabrigaBold;
+    @include fabrigaRegular;
     font-size: 16px;
     line-height: 1.2;
     text-transform: uppercase;
@@ -175,7 +174,7 @@
       top: 65px;
       // bottom: 25px;
       width: auto;
-      padding: 11px 23px;
+      padding: 11px 45px 11px 28px;
       gap: 16px;
       svg {
         width: 20px;
@@ -212,15 +211,7 @@
       background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
       transform: matrix(1, 0, 0, -1, 0, 0);
       z-index: 2;
-
       opacity: 0;
-      visibility: hidden;
-  
-      ._show & {
-        opacity: 1;
-        visibility: visible;
-        transition: 0.3s ease 0s;
-      }
     }
   }
 
@@ -335,7 +326,7 @@
   }
   // masterplan__selector-title
   &__selector-title {
-    font-weight: 600;
+    @include fabrigaMedium;
     font-size: 18px;
     line-height: 21px;
     text-align: center;
@@ -343,7 +334,7 @@
     color: #ffffff;
     @include lg {
       font-size: 12px;
-      font-weight: 600;
+      @include fabrigaMedium;
       line-height: 15.26px;
       text-align: center;
     }
@@ -380,7 +371,7 @@
       justify-content: center;
     }
     span {
-      font-weight: 600;
+      @include fabrigaMedium;
       font-size: 13px;
       line-height: 100%;
       text-transform: uppercase;
@@ -509,7 +500,6 @@
       align-items: center;
       @include fabrigaMedium;
       font-size: 13px;
-      font-weight: 500;
       color: #fff;
       text-transform: uppercase;
       cursor: pointer;
@@ -757,7 +747,7 @@
         align-items: center;
         justify-content: flex-start;
         font-size: 12px;
-        // font-weight: 600;
+        // @include fabrigaMedium;
         line-height: 1.1;
         color: #dcdad5;
         border-radius: 10px;
@@ -782,7 +772,7 @@
   .dot-masterplan__text {
     font-variant-numeric: lining-nums proportional-nums;
     transition: 0.4s ease;
-    @include fabrigaBold;
+    @include fabrigaRegular;
 
     @media (min-width: 2000px) {
       padding: 0;

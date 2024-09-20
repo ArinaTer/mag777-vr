@@ -187,7 +187,6 @@
     h3 {
       color: #fff;
       font-size: 48px;
-      font-weight: 400;
       line-height: 1;
       text-transform: capitalize;
       @include fabrigaRegular;
@@ -291,7 +290,7 @@
     p {
       color: #000;
       font-size: 14px;
-      font-weight: 200;
+      @include fabrigaLight;
       line-height: 1.5;
       @media (min-width: 1920px) {
         font-size: 16px;
@@ -363,7 +362,7 @@
           color: #888;
           font-size: 14px;
           font-style: normal;
-          font-weight: 400;
+          @include fabrigaRegular;
           line-height: 24px;
         }
 
@@ -421,7 +420,7 @@
       span {
         color: #fff;
         font-size: 13px;
-        font-weight: 500;
+        @include fabrigaMedium;
         line-height: 16px;
         letter-spacing: 0.694px;
         text-transform: uppercase;

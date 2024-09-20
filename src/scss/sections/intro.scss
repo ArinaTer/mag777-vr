@@ -43,7 +43,7 @@
   // .intro__container
   &__container {
     transition: 0.3s ease;
-    max-width: 1057px;
+    max-width: 90%;
     width: 100%;
     height: 100vh;
     margin: 0 auto;
@@ -52,13 +52,16 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     .hidden & {
       opacity: 0;
       visibility: hidden;
     }
-    @media (min-width: 2000px) {
-      max-width: 1242px;
+    @media (min-width: 3000px) {
+      max-width: 50%;
+    }
+    @media (min-width: 1800px) {
+      max-width: 75%;
     }
     @include xl {
       max-width: 90%;
@@ -76,20 +79,14 @@
 
   // .intro__top
   &__top {
-    width: 100%;
+    // width: 100%;
+  }
+
+  // .intro__top-container
+  &__top-container {
     display: flex;
-    gap: 57px;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 25px;
-    @include xl {
-      gap: 50px;
-    }
-    @include lg {
-      flex-direction: column;
-      gap: 46px;
-      align-items: flex-start;
-    }
+    gap: 28px;
+    align-items: center;
   }
 
   // .intro__even
@@ -103,27 +100,26 @@
     @include lg {
       order: 1;
     }
-    img {
-      padding-top: 25px;
-      @include md {
-        max-width: 145px;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-    }
   }
 
   &__logo {
-    height: 149px;
-    width: 292px;
-    margin-bottom: 17px;
+    height: 117px;
+    width: 230px;
     @include xl {
       width: 100%;
       height: 100%;
     }
     @include lg {
       margin-bottom: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include md {
+        object-fit: contain;
+      }
     }
   }
 
@@ -203,7 +199,7 @@
 
   // .intro__text
   &__text {
-    padding-top: 17px;
+    padding-top: 25px;
     max-width: 552px;
     width: 100%;
     p {
@@ -222,7 +218,7 @@
     display: flex;
     align-items: center;
     gap: 44px;
-    padding: 7px 40px 7px 7px;
+    padding: 7px 40px 10px 7px;
     align-self: flex-start;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -387,7 +383,11 @@
       font-size: 19px;
       line-height: 100%;
       // font-weight: 400;
-      background: linear-gradient(273.29deg, rgba(103, 108, 112, 0.64) 0.88%, rgba(157, 157, 157, 0.64) 94.06%);
+      background: linear-gradient(
+        273.29deg,
+        rgba(103, 108, 112, 0.64) 0.88%,
+        rgba(157, 157, 157, 0.64) 94.06%
+      );
       border-radius: 12px;
     }
   }

@@ -75,7 +75,7 @@
 			transform: translate(-50%, -50%);
 			color: #fff;
 			font-size: 20px;
-			font-weight: 500;
+			@include fabrigaMedium;
 		}
 
 		@include sm {
@@ -196,7 +196,7 @@
 			color: #fff;
 			font-size: 18px;
 			font-style: normal;
-			font-weight: 400;
+			@include fabrigaRegular;
 			font-variant-numeric: lining-nums proportional-nums;
 			@include md {
 				font-size: 14px;

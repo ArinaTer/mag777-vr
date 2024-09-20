@@ -109,7 +109,7 @@
     h5 {
       color: #ada08c;
       font-size: 24px;
-      font-weight: 300;
+      @include fabrigaLight;
       line-height: normal;
       text-transform: uppercase;
       text-align: center;
@@ -133,7 +133,6 @@
     h3 {
       @include fabrigaRegular;
       font-size: 50px;
-      font-weight: 400;
       line-height: normal;
       text-align: center;
       color: #fff;
@@ -308,7 +307,7 @@
     p {
       color: #fff;
       font-size: 14px;
-      font-weight: 400;
+      @include fabrigaRegular;
       line-height: 150%;
       transform: translateY(100%);
       opacity: 0;
@@ -393,7 +392,6 @@
     text-align: center;
     @include fabrigaRegular;
     font-size: 50px;
-    font-weight: 400;
     line-height: normal;
     @include xl {
       font-size: 42px;
@@ -413,7 +411,7 @@
     color: #cfcfcf;
     text-align: center;
     font-size: 14px;
-    font-weight: 300;
+    @include fabrigaLight;
     line-height: normal;
     text-transform: uppercase;
     @include md {

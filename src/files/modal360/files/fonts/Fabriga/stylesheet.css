@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Fabriga';
+    src: url('FabrigaLight-Regular.eot');
+    src: url('FabrigaLight-Regular.eot?#iefix') format('embedded-opentype'),
+        url('FabrigaLight-Regular.woff2') format('woff2'),
+        url('FabrigaLight-Regular.woff') format('woff'),
+        url('FabrigaLight-Regular.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fabriga';
+    src: url('Fabriga-Bold.eot');
+    src: url('Fabriga-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Fabriga-Bold.woff2') format('woff2'),
+        url('Fabriga-Bold.woff') format('woff'),
+        url('Fabriga-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fabriga';
+    src: url('Fabriga-Black.eot');
+    src: url('Fabriga-Black.eot?#iefix') format('embedded-opentype'),
+        url('Fabriga-Black.woff2') format('woff2'),
+        url('Fabriga-Black.woff') format('woff'),
+        url('Fabriga-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fabriga';
+    src: url('Fabriga-Regular.eot');
+    src: url('Fabriga-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Fabriga-Regular.woff2') format('woff2'),
+        url('Fabriga-Regular.woff') format('woff'),
+        url('Fabriga-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fabriga';
+    src: url('FabrigaMedium-Regular.eot');
+    src: url('FabrigaMedium-Regular.eot?#iefix') format('embedded-opentype'),
+        url('FabrigaMedium-Regular.woff2') format('woff2'),
+        url('FabrigaMedium-Regular.woff') format('woff'),
+        url('FabrigaMedium-Regular.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

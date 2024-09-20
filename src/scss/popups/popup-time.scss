@@ -76,7 +76,7 @@
 	// .time-popup__sub
 	&__sub {
 		font-size: 18px;
-		font-weight: 300;
+		@include fabrigaLight;
 		line-height: 1.5;
 		text-transform: uppercase;
 		color: #ada08c;
@@ -91,7 +91,6 @@
 		font-size: 30px;
 		line-height: 1.2;
 		text-transform: uppercase;
-		font-weight: 400;
 		color: #fff;
 		@include fabrigaRegular;
 		padding-top: 20px;
@@ -108,7 +107,8 @@
 	// .time-popup__text
 	&__text {
 		font-size: 16px;
-		font-weight: 300;
+		@include fabrigaLight;
+		// @include fabrigaLight;
 		line-height: 1.5;
 		margin-top: 20px;
 		color: #fff;
@@ -213,7 +213,7 @@
 				color: #000;
 				font-size: 18px;
 				font-style: normal;
-				font-weight: 300;
+				@include fabrigaLight;
 				line-height: 24px;
 			}
 
@@ -237,7 +237,7 @@
 		width: 100%;
 		text-transform: uppercase;
 		align-items: center;
-		font-weight: 400;
+		@include fabrigaRegular;
 		transition: all 0.3s ease-out 0s;
 		margin-top: 20px;
 		border-radius: 5px;
@@ -245,7 +245,7 @@
 		span {
 			color: #fff;
 			font-size: 13px;
-			font-weight: 300;
+			@include fabrigaLight;
 			line-height: 150%;
 			text-transform: uppercase;
 			overflow: hidden;

@@ -158,7 +158,7 @@
 
   // .brochure-popup__title
   &__title {
-    font-weight: 400;
+    @include fabrigaRegular;
     font-size: 96px;
     line-height: 1;
     text-transform: capitalize;
@@ -195,7 +195,7 @@
     display: none;
     color: #fff;
     font-size: 12px;
-    font-weight: 200;
+    @include fabrigaLight;
     line-height: 13.672px;
     text-align: left;
     padding-top: 22px;
@@ -341,7 +341,7 @@
       p {
         font-size: 13px;
         line-height: 1.5;
-        font-weight: 300;
+        @include fabrigaLight;
         text-align: center;
         text-transform: uppercase;
         color: #000000;
