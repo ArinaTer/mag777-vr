@@ -225,6 +225,9 @@
     z-index: 1;
     transform: translate(15%, 10%) scale(1.5);
     transition: transform 0.3s;
+    @include lg {
+      transform: translate(2%, 10%) scale(1.5);
+    }
 
     img {
       width: 100%;
@@ -235,6 +238,9 @@
     }
     ._show & {
       transform: translate(15%, 10%) scale(1);
+      @include lg {
+        transform: translate(2%, 10%) scale(1);
+      }
     }
   }
 

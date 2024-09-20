@@ -1,5 +1,7 @@
 @import '../../fonts/Fabriga/stylesheet.css';
 
+@import '../../fonts/Cinzel/stylesheet.css';
+
 * {
   padding: 0px;
   margin: 0px;
@@ -2725,7 +2727,7 @@ body {
   left: 0;
   background: #000;
   z-index: 9999;
-  font-family: "Fabriga";
+  font-family: "Montserrat";
   text-transform: uppercase;
   color: #fff;
   width: 100vw;

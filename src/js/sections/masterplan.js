@@ -97,7 +97,7 @@ export function masterplan() {
     });
 
     mm.add('(max-width: 575px)', () => {
-        gsap.set(".masterplan__media", { xPercent: -50 });
+        gsap.set(".masterplan__media", { xPercent: -35 });
     });
 
 
