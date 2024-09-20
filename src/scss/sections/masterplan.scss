@@ -468,7 +468,7 @@
     right: 2%;
     top: calc(50% - 59px);
     padding: 4px;
-    background: #000;
+    background: #191919;
     width: 203px;
     z-index: 1124;
     border-radius: 10px;
@@ -479,6 +479,46 @@
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s;
+    @media(max-width:768px){
+      bottom: 13px;
+      top: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 10px;
+      padding: 1px;
+      background: linear-gradient(
+          135deg,
+          #bcbcbc 0,
+          rgba(188, 188, 188, 0.1) 50%
+        )
+        border-box;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: destination-out;
+      mask-composite: exclude;
+      pointer-events: none;
+      background-size: 200% 100%;
+      background-position: 0 center;
+      animation: shine 3s cubic-bezier(0.4, 0.4, 0.4, 1) infinite;
+    }
+
+    @keyframes shine {
+      0% {
+        background-position: 0 100%;
+      }
+      100% {
+        background-position: 200% center;
+      }
+    }
     .vr360 & {
       transition: all 0.5s;
       opacity: 1;
@@ -492,10 +532,10 @@
     &.active {
       .masterplan__switch-item:nth-child(2) {
         background: #fff;
-        color: #000;
+        color: #252525;
       }
       .masterplan__switch-item:nth-child(1) {
-        background: #000000;
+        background: #191919;
         color: #ffffff;
       }
     }
@@ -516,7 +556,7 @@
 
       &:nth-child(1) {
         background: #fff;
-        color: #000;
+        color: #252525;
       }
     }
   }
@@ -571,6 +611,15 @@
 			mask-composite: exclude;
 			pointer-events: none;
 		}
+    @media(max-width:768px){
+      left: 50%;
+      top: auto;
+      bottom: 67px;
+      transform: translateX(-50%);
+      &.hide{
+        clip-path: inset(100% 0 0 0);
+      }
+    }
   }
 
   //masterplan__checkbox-list
