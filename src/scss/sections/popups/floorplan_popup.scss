@@ -4,21 +4,21 @@
       display: flex;
       align-items: center;
       gap: 10px 30px;
-      margin-bottom: 40px;
+      // margin-bottom: 40px;
       transition: all 0.3s;
       overflow: hidden;
       @media (max-width: 767.98px) {
         gap: 15px;
       }
       @media (max-width: 575.98px) {
-        margin-bottom: 15px;
+        // margin-bottom: 15px;
         padding-bottom: 15px;
       }
     }
 
     // .popup__wrapper
     &__wrapper {
-      max-width: 740px;
+      max-width: 630px;
       @media (max-width: 767.98px) {
         max-width: 100%;
       }
@@ -88,7 +88,7 @@
 
     // popup__swiper-thumb
     &__swiper-thumb {
-      width: 220px;
+      width: 280px;
       @media (max-width: 767.98px) {
         width: 100%;
       }
@@ -115,7 +115,7 @@
 
       p {
         color: #919191;
-        font-family: "Fabriga", sans-serif;
+        font-family: "Cinzel", sans-serif;
         font-size: 20px;
         font-weight: 400;
         line-height: normal;
@@ -194,7 +194,7 @@
 
       h3 {
         color: #333;
-        font-family: "Fabriga", sans-serif;
+        font-family: "Cinzel", sans-serif;
         font-size: 48.75px;
         font-weight: 400;
         line-height: 100%;
@@ -227,7 +227,7 @@
     //popup__tab-desc
     &__tab-desc {
       color: #000;
-      font-family: "Fabriga", sans-serif;
+      font-family: "Cinzel", sans-serif;
       font-size: 14px;
       font-weight: 400;
       line-height: 1;
