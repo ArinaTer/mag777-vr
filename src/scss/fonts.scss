@@ -1,38 +1,3 @@
-// Cinzel
-@include font-face("cinzelRegular", "../files/fonts/Cinzel/Cinzel-Regular");
-@include font-face("cinzelBold", "../files/fonts/Cinzel/Cinzel-Bold");
-
-// Raleway
-@include font-face("ralewayRegular", "../files/fonts/Raleway/Raleway-Regular");
-@include font-face(
-  "ralewaySemiBold",
-  "../files/fonts/Raleway/Raleway-SemiBold"
-);
-@include font-face("ralewayLight", "../files/fonts/Raleway/Raleway-Light");
-@include font-face("ralewayMedium", "../files/fonts/Raleway/Raleway-Medium");
-
-// Cinzel
-@mixin cinzelRegular {
-  font-family: "cinzelRegular", Arial, sans-serif;
-}
-@mixin cinzelBold {
-  font-family: "cinzelBold", Arial, sans-serif;
-}
-// Raleway
-@mixin ralewayRegular {
-  font-family: "ralewayRegular", Arial, sans-serif;
-}
-@mixin ralewaySemiBold {
-  font-family: "ralewaySemiBold", Arial, sans-serif;
-}
-@mixin ralewayLight {
-  font-family: "ralewayLight", Arial, sans-serif;
-}
-@mixin ralewayMedium {
-  font-family: "ralewayMedium", Arial, sans-serif;
-}
-
-
 //Fabriga
 @include font-face("fabrigaRegular", "../files/fonts/Fabriga/Fabriga-Regular");
 @include font-face("fabrigaBlack", "../files/fonts/Fabriga/Fabriga-Black");
