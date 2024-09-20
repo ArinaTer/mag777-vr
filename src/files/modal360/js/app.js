@@ -6237,11 +6237,13 @@ function handleViewPanorama(viewer) {
 
 
 
+const parentWindow = window.parent;
 
 function click(viewerInstance) {
   const viewerSlideExt = document.querySelector(".viewer__swiper .swiper-slide.ext");
   const viewerSlideInt = document.querySelector(".viewer__swiper .swiper-slide.int");
   const initialActiveSlide = viewerSlideExt ? viewerSlideExt : viewerSlideInt;
+
 
   const setViewPanorama = handleViewPanorama(viewerInstance);
 
@@ -6259,6 +6261,7 @@ function click(viewerInstance) {
 };
 
 function handleFakeFullscreen(el) {
+  parentWindow.document.body.classList.toggle("fakeFullscreenActive")
   toggleClassName(document.body, 'fake-fullscreen-active');
   toggleClassToAlter();
 }
