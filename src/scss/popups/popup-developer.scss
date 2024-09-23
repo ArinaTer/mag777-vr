@@ -308,7 +308,7 @@
     p {
       color: #fff;
       font-size: 14px;
-      @include fabrigaRegular;
+      @include fabrigaLight;
       line-height: 150%;
       transform: translateY(100%);
       opacity: 0;
@@ -331,8 +331,8 @@
   // .developer-popup__statis
   &__statis {
     display: flex;
-    justify-content: flex-start;
-    gap: 35px;
+    justify-content: center;
+    gap: 55px;
     margin-top: 35px;
     padding-top: 40px;
     position: relative;
@@ -353,6 +353,7 @@
       align-items: flex-start;
       justify-content: flex-start;
       width: 100%;
+      gap: 35px;
     }
 
     @include md {

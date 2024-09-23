@@ -89,7 +89,7 @@
     color: #ada08c;
     text-align: center;
     font-size: 24px;
-    @include fabrigaRegular;
+    @include fabrigaLight;
     line-height: normal;
     text-transform: uppercase;
     @include md {
@@ -105,7 +105,7 @@
     font-size: 38px;
     line-height: normal;
     text-transform: capitalize;
-    @include fabrigaRegular;
+    @include cinzelRegular;
     @include md {
       font-size: 32px;
     }

@@ -107,18 +107,20 @@
 
   // .time-popup__text
   &__text {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.5;
-    margin-top: 20px;
-    color: #fff;
-
-    @include lg {
-      margin-top: 30px;
-    }
-    @include sm {
-      font-size: 12px;
-      margin-top: 16px;
+    p {
+      font-size: 16px;
+      @include fabrigaLight;
+      line-height: 1.5;
+      margin-top: 20px;
+      color: #fff;
+  
+      @include lg {
+        margin-top: 30px;
+      }
+      @include sm {
+        font-size: 12px;
+        margin-top: 16px;
+      }
     }
   }
 

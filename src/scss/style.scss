@@ -29,6 +29,7 @@ body {
   position: relative;
   @include fabrigaRegular;
 
+
   &::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 0px;
