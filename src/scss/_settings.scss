@@ -71,4 +71,8 @@ select:-webkit-autofill:focus {
 
 input{
     border-radius: 0;
+    &::-webkit-contacts-auto-fill-button {
+        color: #fff;
+        background-color: #fff;
+    }
 }

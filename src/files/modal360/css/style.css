@@ -3299,7 +3299,7 @@ main {
   z-index: 1;
   height: 100vh;
   width: 100%;
-  max-width: 633px;
+  max-width: 635px;
   -webkit-transform: translateX(100%);
       -ms-transform: translateX(100%);
           transform: translateX(100%);
@@ -3318,7 +3318,7 @@ main {
 
 .popup__container {
   width: 100%;
-  max-width: 633px;
+  max-width: 635px;
   height: 100%;
   position: relative;
   overflow: auto;
@@ -3557,13 +3557,13 @@ main {
 }
 
 .floorplan-popup .popup__wrapper {
-  max-width: 630px;
+  max-width: 635px;
 }
 
 .floorplan-popup .popup__container {
   padding: 40px 46px;
   background-color: white;
-  max-width: 740px;
+  max-width: 100%;
 }
 
 .floorplan-popup .popup__top {
@@ -3580,10 +3580,11 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 48px;
 }
 
 .floorplan-popup .popup__swiper-main {
-  width: 350px;
+  width: 250px;
 }
 
 .floorplan-popup .popup__swiper-pagination {
@@ -3616,7 +3617,7 @@ main {
 }
 
 .floorplan-popup .popup__swiper-thumb {
-  width: 280px;
+  width: 230px;
 }
 
 .floorplan-popup .popup__tab-btn {
@@ -4160,6 +4161,7 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 0;
   }
 
   .floorplan-popup .popup__swiper-main {
@@ -4228,26 +4230,7 @@ main {
   .floorplan-popup .popup__form-input input {
     color: #fff;
     padding: 7px 0 6px;
-  }
-
-  .floorplan-popup .popup__form-input input::-webkit-input-placeholder {
-    font-size: 16px;
-  }
-
-  .floorplan-popup .popup__form-input input::-moz-placeholder {
-    font-size: 16px;
-  }
-
-  .floorplan-popup .popup__form-input input:-ms-input-placeholder {
-    font-size: 16px;
-  }
-
-  .floorplan-popup .popup__form-input input::-ms-input-placeholder {
-    font-size: 16px;
-  }
-
-  .floorplan-popup .popup__form-input input::placeholder {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .floorplan-popup .popup__form-input input:-webkit-autofill,
@@ -4263,7 +4246,7 @@ main {
 
   .floorplan-popup .popup__form-btn span {
     color: #000;
-    font-weight: 600;
+    font-weight: 300;
   }
 
   .info-popup .popup__btn-close-first {
@@ -4336,26 +4319,7 @@ main {
   .info-popup .popup__form-input input {
     color: #fff;
     padding: 7px 0 6px;
-  }
-
-  .info-popup .popup__form-input input::-webkit-input-placeholder {
-    font-size: 16px;
-  }
-
-  .info-popup .popup__form-input input::-moz-placeholder {
-    font-size: 16px;
-  }
-
-  .info-popup .popup__form-input input:-ms-input-placeholder {
-    font-size: 16px;
-  }
-
-  .info-popup .popup__form-input input::-ms-input-placeholder {
-    font-size: 16px;
-  }
-
-  .info-popup .popup__form-input input::placeholder {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .info-popup .popup__form-btn {
@@ -4364,7 +4328,7 @@ main {
   }
 
   .info-popup .popup__form-btn span {
-    font-weight: 600;
+    font-weight: 300;
   }
 }
 

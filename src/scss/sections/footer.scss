@@ -148,7 +148,8 @@
   &__text {
     color: #86868b;
     font-size: 24px;
-    font-weight: 700;
+    @include fabrigaLight;
+    // font-weight: 200;
     line-height: 120.932%;
     max-width: 679px;
     width: 100%;
@@ -339,7 +340,7 @@
       border-radius: 0;
 
       &::placeholder {
-        color: rgba(255, 255, 255, 0.75);
+        color: rgba(145, 145, 145, 0.5);
         font-size: 13px;
       }
 
@@ -348,8 +349,13 @@
           opacity: 0;
         }
       }
-    }
 
+      
+    }
+    .iti__selected-dial-code {
+      color: rgba(145, 145, 145, 0.5);
+    }
+    
     @include md {
     }
   }
