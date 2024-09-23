@@ -152,6 +152,8 @@
         @media (max-width: 767.98px) {
           color: #fff;
           padding: 7px 0 6px;
+          font-size: 14px;
+
         }
 
         &:focus {
@@ -161,9 +163,9 @@
         &::placeholder {
           color: #888;
           font-variant-numeric: lining-nums proportional-nums;
-          @media (max-width: 767.98px) {
-            font-size: 16px;
-          }
+          // @media (max-width: 767.98px) {
+          //   font-size: 16px;
+          // }
         }
 
         &:-webkit-autofill,
@@ -207,7 +209,7 @@
       span {
         color: #000;
         @media (max-width: 767.98px) {
-          font-weight: 600;
+          font-weight: 300;
         }
       }
 
