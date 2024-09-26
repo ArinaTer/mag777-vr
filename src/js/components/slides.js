@@ -13,29 +13,60 @@ export function slides() {
     //     });
     // }
 
+    const paymentSwipers = document.querySelectorAll('.paymentSwiper')
 
-    if (document.querySelector('.paymentSwiper')) {
-        new Swiper('.paymentSwiper', {
-            modules: [ Navigation],
-            observer: true,
-            observeParents: true,
-            slidesPerView: 3,
-            
-            breakpoints: {
-                300: {
-                    slidesPerView: 1,
+    if (paymentSwipers.length > 0) {
+        paymentSwipers.forEach((el,index) => {
+            const nextButton = document.querySelectorAll(".swiper-button-next")[index];
+            const prevButton = document.querySelectorAll(".swiper-button-prev")[index];
+
+            new Swiper(el, {
+                modules: [ Navigation],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 3,
+                
+                breakpoints: {
+                    300: {
+                        slidesPerView: 1,
+                    },
+                    767: {
+                        slidesPerView: 2,
+                    },
+                    992: {
+                        slidesPerView: 3,
+                    },
                 },
-                767: {
-                    slidesPerView: 2,
+                navigation: {
+                    nextEl: nextButton,
+                    prevEl: prevButton,
                 },
-                992: {
-                    slidesPerView: 3,
-                },
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
+            });
         });
     }
+
+    // if (document.querySelector('.paymentSwiper')) {
+    //     new Swiper('.paymentSwiper', {
+    //         modules: [ Navigation],
+    //         observer: true,
+    //         observeParents: true,
+    //         slidesPerView: 3,
+            
+    //         breakpoints: {
+    //             300: {
+    //                 slidesPerView: 1,
+    //             },
+    //             767: {
+    //                 slidesPerView: 2,
+    //             },
+    //             992: {
+    //                 slidesPerView: 3,
+    //             },
+    //         },
+    //         navigation: {
+    //             nextEl: ".swiper-button-next",
+    //             prevEl: ".swiper-button-prev",
+    //         },
+    //     });
+    // }
 }

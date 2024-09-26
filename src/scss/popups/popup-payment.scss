@@ -78,7 +78,7 @@
 
   // .payment-popup__head
   &__head {
-    padding: 45px 80px;
+    padding: 50px 80px 125px;
     @include md {
       padding: 33px 22px 0;
     }
@@ -89,7 +89,7 @@
     color: #ada08c;
     text-align: center;
     font-size: 24px;
-    @include fabrigaLight;
+    @include fabrigaRegular;
     line-height: normal;
     text-transform: uppercase;
     @include md {
@@ -105,10 +105,12 @@
     font-size: 38px;
     line-height: normal;
     text-transform: capitalize;
+    font-weight: 300;
     @include cinzelRegular;
     @include md {
       font-size: 32px;
     }
+
   }
 }
 
@@ -202,7 +204,7 @@
 
     h3 {
       font-size: 98px;
-      line-height: normal;
+      line-height: 100%;
       color: #fff;
       text-align: center;
       @include fabrigaLight;
@@ -217,6 +219,113 @@
       @include fabrigaLight;
     }
   }
+}
+
+.payment {
+  //payment__tabs
+  &__tabs {
+
+  }
+
+  //payment__nav
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    margin: 0 auto 30px;
+
+    &.payment__nav-none {
+      display: none;
+    }
+  }
+
+  //payment__nav-link
+  &__nav-link {
+    position: relative;
+    cursor: pointer;
+
+    span {
+      // color: #fff;
+      font-weight: 300;
+      font-size: 24px;
+      color: #575859;
+      text-transform: uppercase;
+      transition: all 0.3s;
+      @media (max-width: 576px) {
+        font-size: 13px;
+      }
+    }
+
+    &::after {
+      content: "";
+      width: 0%;
+      height: 1px;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      background: linear-gradient(90deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.2) 100%);
+      background-size: 200% 100%;
+      background-position: 100% 100%;
+      transition: all 0.5s;
+    }
+
+    &.active {
+      span {
+        color: #fff;
+      }
+
+      &::after {
+        width: 100%;
+        animation: shinePayment 2s linear infinite alternate-reverse backwards;
+
+      }
+    }
+
+    @keyframes shinePayment {
+      0% {
+        background-position: 100% 100%;
+      }
+      100% {
+        background-position: 0% 100%;
+      }
+    }
+
+  }
+
+  //payment__tab-contant
+  &__tab-contant {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    @include md {
+      height: 122px;
+    }
+  }
+
+  //payment__tab-pane
+  &__tab-pane {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    // opacity: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+    &.active {
+      // opacity: 1;
+      display: flex;
+    }
+  }
+
+
 }
 
 .payment-popup.popup-show {
@@ -237,10 +346,10 @@
   }
 
   .payment__swiper {
-    height: 280px;
+    height: 135px;
     transition-delay: 0.2s;
     @include md {
-      height: 240px;
+      height: 122px;
     }
     &-slide-body {
       transform: translateY(0);

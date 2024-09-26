@@ -21,6 +21,22 @@ export function popups() {
 	// 		document.documentElement.classList.remove('popup-show');
 	// 	});
 	// });
+
+	const selectElement = document.querySelectorAll('.u-form-select');
+	
+	selectElement.forEach(el => {
+		el.style.opacity = '0.4';
+		
+		el.addEventListener('change', function() {
+		  if (el.value !== "Country Code") {
+			el.style.opacity = '1';
+		  } else {
+			el.style.opacity = '0.4';
+		  }
+		});
+	});
+
+
   
 	const popupBtns = gsap.utils.toArray("[data-open-popup]");
 	const popupCloseBtns = gsap.utils.toArray("[data-close-popup]");

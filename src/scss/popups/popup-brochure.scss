@@ -1,7 +1,4 @@
 .brochure-popup {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 40px;
 
   @include md {
@@ -11,23 +8,20 @@
   // .brochure-popup__wrapper
   &__wrapper {
     background-color: transparent;
-    max-width: 1140px;
-    height: auto;
+    max-width: 975px;
     width: 100%;
-    margin: auto;
+    height: 565px;
     padding: 0;
     transition: all 0.5s;
-    flex-direction: column;
-    gap: 10px;
-    @include xl {
-    }
     @include lg {
     }
     @include md {
       max-width: 80%;
+      flex-direction: column;
+      gap: 10px;
+      height: auto;
     }
     @include sm {
-      height: 100%;
       max-width: 100%;
     }
   }
@@ -39,105 +33,150 @@
     transition-delay: 0s;
   }
 
-  // .brochure-popup__top
-  &__top {
+  &__container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
     width: 100%;
     height: 100%;
+
+    @include md {
+      flex-direction: column;
+      justify-content: center;
+      gap: 19px;
+    }
+  }
+
+  &__even {
+    position: relative;
+    max-width: 55%;
+    width: 100%;
+    height: 334px;
     border-radius: 20px;
     overflow: hidden;
-    position: relative;
-    z-index: 2;
-    clip-path: inset(0 30% 0 30%);
-    scale: 1.2;
-    transition: all 0.5s;
+    transition: height 0.5s;
     transition-delay: 0s;
+    
     @include md {
-      scale: 1;
-      clip-path: inset(0 0 0 0);
+      max-width: 100%;
+      transition: all 0.5s;
+      transition-delay: 0s;
+      z-index: 2;
+      height: 45%;
+      padding: 1px;
     }
     @include sm {
-      height: 315px;
+      height: 50%;
+    }
+
+    &-img {
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.8s;
+        transition-delay: 0s;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 145px;
+        transform: translateY(90%);
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.7) 100%
+        );
+        transition: transform 0.5s;
+        transition-delay: 0s;
+
+        @include md {
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transform: initial;
+          background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0) 24.41%,
+            rgba(0, 0, 0, 0.92) 88.56%
+          );
+        }
+      }
     }
     &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        177.87deg,
-        rgba(0, 0, 0, 0) 12.07%,
-        rgba(0, 0, 0, 0.67) 80.26%
-      );
-      z-index: 1;
       @include md {
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 28.41%, rgba(0, 0, 0, 0.70) 88.56%);
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 20px;
+        padding: 1px;
+        background: linear-gradient(90.05deg, #979797 0%, rgba(151, 151, 151, 0) 45%, #979797 100%);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+        pointer-events: none;
+        z-index: 1;
       }
     }
 
-    // @include sm {
-    //   height: auto;
-    // }
   }
 
-  // &__img-desctop {
-  //   display: block;
-  //   @include md {
-  //     display: none;
-  //   }
-  // }
-  // &__img-mobile {
-  //   display: none;
-  //   position: relative;
-  //   @include md {
-  //     display: block;
-  //   }
-  //   // img {
-  //   //   width: auto;
-  //   //   height: auto;
-  //   //   object-fit: contain;
-  //   // }
-  // }
 
-  &__img {
+  &__odd {
     position: relative;
-    height: 425px;
-
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 35%;
-      @media(max-width:768px){
-      height: 75%;
-      object-position: 44% 20%;
-      }
-    }
-    
-  }
-
-  // .brochure-popup__bottom
-  &__bottom {
-    height: 0;
-    opacity: 0;
-    transition: all 0.5s;
-    transition-delay: 0s;
-    position: relative;
-    z-index: 1;
+    overflow: hidden;
+    max-width: 45%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    height: 334px;
     border-radius: 20px;
-    // overflow: hidden;
+    transition: height 0.5s;
+    transition-delay: 0s;
     background: rgba(0, 0, 0, 0.9);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    transform: translateY(-100%);
-    z-index: 1;
+    padding: 54px 45px;
     @include lg {
+      padding: 75px 45px;
+
     }
     @include md {
+      width: 100%;
+      max-width: 100%;
+      height: 55%;
+      opacity: 0;
+      transition: all 0.5s;
+      transition-delay: 0s;
+      position: relative;
       padding: 0 35px;
+      z-index: 1;
+      overflow: hidden;
+      transform: translateY(-100%);
+      z-index: 1;
+      padding: 25px 27px;
+
     }
+    // @include sm {
+    //   padding: 15px 17px;
+
+    // }
+
     &::before {
       content: "";
       position: absolute;
@@ -161,78 +200,69 @@
     }
   }
 
-  // .brochure-popup__title
   &__title {
-    font-size: 96px;
-    line-height: 1;
-    text-transform: capitalize;
-    color: #ffffff;
-    padding-left: 30px;
-    transition: all 0.5s;
-    transition-delay: 0s;
-    @include cinzelRegular;
-    font-weight: 300;
-    position: absolute;
-    bottom: 65px;
-    left: 65px;
-    z-index: 2;
-    opacity: 0;
+    h3 {
+      color: #fff;
+      font-size: 60px;
+      font-weight: 400;
+      line-height: 1;
+      text-transform: capitalize;
+      text-align: center;
+      @include cinzelRegular;
+      @include lg {
+        font-size: 50px;
+      }
+      @include md {
+        font-size: 48px;
+      }
+      @include sm {
+        text-align: left;
+      }
+    }
 
-    @include xl {
-      font-size: 62px;
+    &-mobile {
+      display: none;
+      position: absolute;
+      bottom: 50px;
+      left: 35px;
+      width: 60%;
+      z-index: 2;
+      @include md {
+        display: block;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      @include sm {
+       bottom: 21px;
+       left: 25px;
+        transform: translateX(0%);
+      }
+      @media (max-width: 380px) {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+      }
     }
-    @include lg {
-      font-size: 48px;
-      padding-left: 0;
-      bottom: 30px;
-      left: 30px;
-    }
-    @include md {
-      opacity: 1;
-    }
-    @include sm {
-      left: 50%;
-      transform: translateX(-50%);
+    &-desctop {
+      display: block;
+      @include md {
+        display: none;
+      }
     }
   }
 
-  &__text {
-    display: none;
-    color: #fff;
-    font-size: 12px;
-    @include fabrigaLight;
-    line-height: 13.672px;
-    text-align: left;
-    padding-top: 22px;
-    // @include md {
-    //   display: block;
-    // }
-  }
 
-  // .brochure-popup__form
   &__form {
-    padding: 30px 50px 40px;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    height: 0%;
+    transition: all 700ms;
+    transition-delay: 0s;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 18px;
-
-    @include lg {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-      padding: 30px;
-    }
-
+    flex-direction: column;
     @include md {
-      padding: 55px 0;
-    }
-    @include sm {
-      padding: 20px 0 40px;
-    }
-    @include sm {
-      padding: 30px 0;
+      transform: translateY(-100%);
     }
 
     &-container {
@@ -246,37 +276,19 @@
     }
   }
 
-  // .brochure-popup__form-input
+
   &__form-input {
     width: 100%;
-
-    .iti {
-      .form-control {
-        text-align: left;
-      }
+    margin-bottom: 12px;
+    @include md {
+      flex-direction: column;
+    }
+    label {
+      display: none;
     }
 
-    .iti__selected-dial-code {
-      font-size: 14px;
-      color: #f3f2ef;
-      font-variant-numeric: lining-nums proportional-nums;
-    }
-
-    .iti__country-list {
-      max-width: 330px;
-    }
-
-    .iti--separate-dial-code .iti__selected-flag {
-      background-color: transparent;
-
-      &:hover {
-        background-color: transparent;
-      }
-    }
-
-    .iti__arrow {
-      border-top-color: #f3f2ef !important;
-      border-bottom-color: #f3f2ef !important;
+    .iti__flag-container{
+      display: none !important;
     }
     input {
       border: none;
@@ -286,11 +298,12 @@
       line-height: 1.2;
       color: #f3f2ef;
       border-bottom: 1px solid rgba(145, 145, 145, 0.5);
-      padding: 10px 4px;
+      padding: 8px 0;
       border-radius: 0;
+      padding-left: 4px;
 
       &::placeholder {
-        color: rgba(145, 145, 145, 0.5);
+        
         font-size: 14px;
       }
 
@@ -300,93 +313,112 @@
         outline: 0;
         outline-offset: 0;
       }
+      &:valid {
+        border-bottom: 1px solid #f3f2ef;
+      }
       &:focus {
         &::placeholder {
           opacity: 0;
         }
+        border-bottom: 1px solid #f3f2ef;
       }
 
     }
-    .iti__selected-dial-code {
-      color: rgba(145, 145, 145, 0.5);
+    select {
+      width: 100%;
+      font-size: 14px;
+      line-height: 1.2;
+      border-bottom: 1px solid #f3f2ef;
+      padding: 8px 0;
+      color: #f3f2ef;
+
+    }
+    .u-form-select-wrapper {
+      svg {
+        display: none;
+      }
     }
   }
 
   // .brochure-popup__form-btn
   &__form-btn {
-    button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(
-          180deg,
-          rgba(0, 0, 0, 0) 0%,
-          rgba(0, 0, 0, 0.17) 100%
-        ),
-        linear-gradient(0deg, #ffffff, #ffffff);
-      padding: 6px 10px;
-      width: 228px;
-      height: 100%;
-      border-radius: 5px;
-      transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.17) 100%
+      ),
+      linear-gradient(0deg, #ffffff, #ffffff);
+    padding: 13px 20px;
+    width:100%;
+    border-radius: 5px;
+    transition: all 0.5s;
+    margin-top: 28px;
+    @include md {
+      margin-top: 13px;
+    }
 
-      img {
-        width: 0;
-        transition: width 0.5s;
-        transform: translateX(10px);
-        height: 8px;
-      }
 
-      &:hover {
-        img {
-          transform: translateX(10px);
-          width: 23px;
-        }
-      }
-
-      @include md {
-      }
-
-      p {
-        font-size: 13px;
-        line-height: 1.5;
-        @include fabrigaLight;
-        text-align: center;
-        text-transform: uppercase;
-        color: #000000;
-
-        @include md {
-        }
-      }
+    input {
+      font-size: 13px;
+      line-height: 1.5;
+      @include fabrigaLight;
+      text-align: center;
+      text-transform: uppercase;
+      color: #000000;
     }
   }
+
 }
 
 .brochure-popup.popup-show {
-  .brochure-popup__top {
-    clip-path: inset(0 0 0 0);
-    scale: 1;
-    transition-delay: 0.3s;
-  }
-  .brochure-popup__title {
+  .brochure-popup__close {
     opacity: 1;
+    transition-delay: 1.1s;
+  }
+  .brochure-popup__even {
+    height: 100%;
+    transition-delay: 0.5s;
+    @include md {
+      transition-delay: 0.3s;
+      // height: initial;
+    }
+    &-img {
+      &::after {
+        transform: translateY(0);
+        transition-delay: 0.6s;
+        @include md {
+          transform: initial;
+          transition-delay: initial;
+        }
+      }
+    }
+  }
+  .brochure-popup__odd {
+    height: 100%;
     transition-delay: 0.5s;
     @include md {
       opacity: 1;
-      transition-delay: initial;
+      height: auto;
+      transition-delay: 0.4s;
+      transform: translateY(0%);
     }
-  }
-  .brochure-popup__close {
-    opacity: 1;
-    transition-delay: 0.5s;
-  }
-  .brochure-popup__bottom {
-    opacity: 1;
-    height: 100%;
-    transition-delay: 0.4s;
-    transform: translateY(0%);
     @include sm {
       height: auto;
+    }
+  }
+
+  .brochure-popup__form {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+    transition-delay: 0.5s;
+    @include md {
+      transition-delay: 0.4s;
+      transform: translateY(0%);
+
     }
   }
 }

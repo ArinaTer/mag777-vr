@@ -14,6 +14,8 @@ import { isMobile } from './modules/functions.js';
 import { header } from "./components/header.js";
 import { global } from "./global.js";
 import { popups } from "./components/popups.js";
+import { tabPatment } from "./components/popupTab.js";
+
 import { slides } from "./components/slides.js";
 import { masterplan } from "./sections/masterplan.js";
 import filter from "./sections/filter.js";
@@ -39,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	masterplan();
 	global();
 	popups();
+	tabPatment();
 	slides();
 
 	ScrollTrigger.config({
