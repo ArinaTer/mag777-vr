@@ -299,25 +299,35 @@
     &__form-input {
       margin-bottom: 13px;
       input {
-        border-bottom: 0.5px solid #ccc;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
         color: #000;
         font-variant-numeric: lining-nums proportional-nums;
         @media (max-width: 767.98px) {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.5);
           color: #fff;
           padding: 7px 0 6px;
           font-size: 14px;
         }
 
         &:focus {
-          border-bottom: 0.5px solid rgb(126, 126, 126);
+          border-bottom: 1px solid #000;
+          @media (max-width: 767.98px) {
+            border-bottom: 1px solid #fff;
+          }
+        }
+        &:valid {
+          border-bottom: 1px solid #000;
+          @media (max-width: 767.98px) {
+            border-bottom: 1px solid #fff;
+          }
         }
 
         &::placeholder {
-          color: #888;
+          color: rgba(0, 0, 0, 0.5);
           font-variant-numeric: lining-nums proportional-nums;
-          // @media (max-width: 767.98px) {
-          //   font-size: 16px;
-          // }
+          @media (max-width: 767.98px) {
+            color: rgba(255, 255, 255, 0.5);
+          }
         }
 
         &:-webkit-autofill,
@@ -328,6 +338,17 @@
           @media (max-width: 767.98px) {
             -webkit-text-fill-color: #fff !important;
           }
+        }
+      }
+      select {
+        border-bottom: 1px solid #000;
+        color: #000;
+        font-variant-numeric: lining-nums proportional-nums;
+        @media (max-width: 767.98px) {
+          border-bottom: 1px solid #fff;
+          color: #fff;
+          padding: 7px 0 6px;
+          font-size: 14px;
         }
       }
     }

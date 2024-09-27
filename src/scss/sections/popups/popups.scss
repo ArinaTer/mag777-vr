@@ -177,10 +177,13 @@
       background-color: transparent;
       border-radius: 0;
       line-height: 24px;
+      padding-left: 4px;
+        @media (max-width: 767.98px) {
+          padding-left: 4px;
+        }
 
       &:focus {
         border: none;
-        border-bottom: 0.5px solid rgb(126, 126, 126);
         box-shadow: none;
         outline: none;
 
@@ -190,26 +193,29 @@
       }
 
       &::placeholder {
-        font-size: 12px;
+        // font-size: 12px;
         font-style: normal;
         font-weight: 300;
         line-height: 24px;
       }
     }
-    .iti {
-      .form-control {
-        text-align: left;
+    select {
+      border: none;
+      width: 100%;
+      padding: 8px 0;
+      background-color: transparent;
+      border-radius: 0;
+      line-height: 24px;
+      &:focus {
+        border: none;
+        box-shadow: none;
+        outline: none;
+
       }
-    }
 
-    .iti__selected-dial-code {
-      font-size: 12px;
-      font-variant-numeric: lining-nums proportional-nums;
-      color: #888;
     }
-
-    &:last-of-type {
-      margin-bottom: 0;
+    .iti__flag-container{
+      display: none !important;
     }
   }
 
@@ -222,7 +228,7 @@
     justify-content: center;
     gap: 12px;
     width: 80%;
-    margin: 55px auto 0;
+    margin: 40px auto 0;
 
     &:hover {
       background-position: 210% 100%;
