@@ -1,12 +1,14 @@
 [
-    {
-        "img": "https://d3b6muno9lbfvx.cloudfront.net/mag777-vr/files/modal-360-img/img/Road-View-1/gallery/MAG_777_001.jpg"
-    },
-    {
-        "img": "https://d3b6muno9lbfvx.cloudfront.net/mag777-vr/files/modal-360-img/img/Road-View-1/gallery/MAG_777_003.jpg"
-    },{
-        "img": "https://d3b6muno9lbfvx.cloudfront.net/mag777-vr/files/modal-360-img/img/Road-View-1/gallery/MAG777_cam1.jpg"
-    },{
-        "img": "https://d3b6muno9lbfvx.cloudfront.net/mag777-vr/files/modal-360-img/img/Road-View-1/gallery/MAG777_Cam002.jpg"
-    }
+  {
+    "img": "https://d3b6muno9lbfvx.cloudfront.net/mag777-vr/files/modal-360-img/img1/Road-View-1/gallery/MAG_777_001.jpg"
+  },
+  {
+    "img": "https://d3b6muno9lbfvx.cloudfront.net/mag777-vr/files/modal-360-img/img1/Road-View-1/gallery/MAG_777_003.jpg"
+  },
+  {
+    "img": "https://d3b6muno9lbfvx.cloudfront.net/mag777-vr/files/modal-360-img/img1/Road-View-1/gallery/MAG777_cam1.jpg"
+  },
+  {
+    "img": "https://d3b6muno9lbfvx.cloudfront.net/mag777-vr/files/modal-360-img/img1/Road-View-1/gallery/MAG777_Cam002.jpg"
+  }
 ]
