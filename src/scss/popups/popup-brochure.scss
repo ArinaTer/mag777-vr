@@ -283,9 +283,6 @@
     @include md {
       flex-direction: column;
     }
-    label {
-      display: none;
-    }
 
     .iti__flag-container{
       display: none !important;
@@ -297,7 +294,7 @@
       font-size: 14px;
       line-height: 1.2;
       color: #f3f2ef;
-      border-bottom: 1px solid rgba(145, 145, 145, 0.5);
+      border-bottom: 0.5px solid rgba(145, 145, 145, 0.5);
       padding: 8px 0;
       border-radius: 0;
       padding-left: 4px;
@@ -314,13 +311,13 @@
         outline-offset: 0;
       }
       &:valid {
-        border-bottom: 1px solid #f3f2ef;
+        border-bottom: 0.5px solid #f3f2ef;
       }
       &:focus {
         &::placeholder {
           opacity: 0;
         }
-        border-bottom: 1px solid #f3f2ef;
+        border-bottom: 0.5px solid #f3f2ef;
       }
 
     }
@@ -328,15 +325,10 @@
       width: 100%;
       font-size: 14px;
       line-height: 1.2;
-      border-bottom: 1px solid #f3f2ef;
+      border-bottom: 0.5px solid #f3f2ef;
       padding: 8px 0;
       color: #f3f2ef;
 
-    }
-    .u-form-select-wrapper {
-      svg {
-        display: none;
-      }
     }
   }
 
@@ -361,7 +353,7 @@
     }
 
 
-    input {
+    span {
       font-size: 13px;
       line-height: 1.5;
       @include fabrigaLight;
@@ -369,6 +361,22 @@
       text-transform: uppercase;
       color: #000000;
     }
+
+    img {
+      width: 0;
+      transition: width 0.5s;
+      transform: translateX(10px);
+      height: 10px;
+      filter: invert(1);
+    }
+
+    &:hover {
+      img {
+        transform: translateX(10px);
+        width: 35px;
+      }
+    }
+
   }
 
 }

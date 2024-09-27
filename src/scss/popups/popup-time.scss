@@ -13,7 +13,10 @@
     height: auto;
 
     @include md {
-      max-width: 440px;
+      max-width: 100%;
+      height: 100%;
+      overflow: hidden;
+
     }
   }
 
@@ -39,15 +42,9 @@
     overflow: hidden;
     border-radius: 20px;
     background-color: #f3f2ef;
-    // background: linear-gradient(
-    //     90.05deg,
-    //     #979797 0%,
-    //     rgba(151, 151, 151, 0) 45%,
-    //     #979797 100%
-    //   ),
-    //   linear-gradient(0deg, #f3f2ef, #f3f2ef);
-
     @include md {
+      overflow: auto;
+      height: 100%;
     }
   }
 
@@ -113,7 +110,7 @@
       line-height: 1.5;
       margin-top: 20px;
       color: #fff;
-  
+
       @include lg {
         margin-top: 30px;
       }
@@ -135,11 +132,8 @@
     align-items: center;
     justify-content: center;
     background: #f3f2ef;
-    // border-radius: 20px;
-    // gap: 25px;
 
     @include lg {
-      gap: 24px;
       padding: 30px 20px 20px;
     }
 
@@ -148,77 +142,54 @@
     }
 
     @include sm {
-      padding: 20px 16px;
-      gap: 5px;
+      padding: 10px 16px;
     }
   }
 
   // .time-popup__form-input
   &__form-input {
     width: 100%;
-    margin-bottom: 25px;
-    @include md {
-      margin-bottom: 0;
-    }
-    .iti {
-      .form-control {
-        text-align: left;
-      }
-      .iti__selected-dial-code {
-        color: #888;
-		font-size: 14px;
-      }
-      input {
-        padding: 15px 15px;
-        padding-left: 110px !important;
-        @include md {
-          padding: 7px 15px;
-		  padding-left: 100px !important;
+    margin-bottom: 15px;
 
-        }
-      }
-    }
-
-    // &:nth-child(2) {
-    //   margin-bottom: 0;
-    // }
-
-    // .iti__selected-dial-code {
-    //   font-size: 16px;
-    //   font-variant-numeric: lining-nums proportional-nums;
-    //   color: #888;
-    // }
-
-    &:last-of-type {
-      margin-bottom: 0;
+    .iti__flag-container {
+      display: none !important;
     }
     input {
-		border: none;
-        border-bottom: 0.5px solid #868686;
-        width: 100%;
-        padding: 10px 0 8px;
-        background-color: transparent;
-        color: #000;
-        border-radius: 0;
-        font-size: 14px;
-        
-      &:focus {
-		border: none;
-		border-bottom: 0.5px solid #000;
-		box-shadow: none;
-		outline: none;
+      border: none;
+      border-bottom: 0.5px solid rgba(0, 0, 0, 0.4);
+      width: 100%;
+      padding: 10px 0 8px;
+      background-color: transparent;
+      color: #000;
+      border-radius: 0;
+      font-size: 14px;
+      padding-left: 4px;
+     
 
-		&::placeholder {
-		  opacity: 0;
-		}
-	  }
+      &:valid {
+        border-bottom: 0.5px solid #000;
+        
+      }
+
+      &:focus {
+        border: none;
+        border-bottom: 0.5px solid #000;
+        box-shadow: none;
+        outline: none;
+        border-bottom: 0.5px solid #000;
+        
+        &::placeholder {
+          opacity: 0;
+        }
+      }
 
       &::placeholder {
-        color: #888;
+        color: rgba(0, 0, 0, 0.4);
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: 24px;
+        
       }
 
       &:-webkit-autofill,
@@ -226,10 +197,16 @@
       &:-webkit-autofill:focus {
         transition: background-color 5000s ease-in-out 0s;
         -webkit-text-fill-color: #000 !important;
-        // @include md {
-        //   -webkit-text-fill-color: #fff !important;
-        // }
+        
       }
+    }
+
+    select {
+      border-bottom: 0.5px solid #000;
+      width: 100%;
+      padding: 10px 0 8px;
+      color: #000;
+      font-size: 14px;
     }
   }
 
@@ -246,8 +223,12 @@
     align-items: center;
     font-weight: 400;
     transition: all 0.3s ease-out 0s;
-    margin-top: 20px;
+    margin-top: 8px;
     border-radius: 5px;
+    @include md {
+      margin-top: 8px;
+      gap: 8px;
+    }
 
     span {
       color: #fff;
@@ -260,13 +241,15 @@
 
     img {
       width: 0;
-      transition: all 0.5s;
+      transition: width 0.5s;
+      transform: translateX(10px);
+      height: 10px;
     }
-    @media (min-width: 767.99px) {
-      &:hover {
-        img {
-          width: 48px;
-        }
+
+    &:hover {
+      img {
+        transform: translateX(10px);
+        width: 35px;
       }
     }
   }
