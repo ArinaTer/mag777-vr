@@ -13,7 +13,7 @@ export function slides() {
     //     });
     // }
 
-    const paymentSwipers = document.querySelectorAll('.paymentSwiper')
+    const paymentSwipers = document.querySelectorAll('.paymentSwiper.swiper')
 
     if (paymentSwipers.length > 0) {
         paymentSwipers.forEach((el,index) => {
@@ -22,19 +22,21 @@ export function slides() {
 
             new Swiper(el, {
                 modules: [ Navigation],
-                observer: true,
-                observeParents: true,
                 slidesPerView: 3,
-                
+                spaceBetween: 50,
+                freeMode: true, 
                 breakpoints: {
                     300: {
-                        slidesPerView: 1,
+                        slidesPerView: 1.5,
+                        spaceBetween: 18,
                     },
                     767: {
-                        slidesPerView: 2,
+                        sslidesPerView: 1.5,
+                        spaceBetween: 30,
                     },
                     992: {
                         slidesPerView: 3,
+                        spaceBetween: 50,
                     },
                 },
                 navigation: {

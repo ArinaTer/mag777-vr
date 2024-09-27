@@ -293,14 +293,17 @@
       width: 100%;
       font-size: 14px;
       line-height: 1.2;
-      color: #f3f2ef;
-      border-bottom: 0.5px solid rgba(145, 145, 145, 0.5);
+      color: #fff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
       padding: 8px 0;
       border-radius: 0;
       padding-left: 4px;
+      @include md {
+        padding-left: 0px;
+      }
 
       &::placeholder {
-        
+        color: rgba(255, 255, 255, 0.5);
         font-size: 14px;
       }
 
@@ -311,13 +314,13 @@
         outline-offset: 0;
       }
       &:valid {
-        border-bottom: 0.5px solid #f3f2ef;
+        border-bottom: 1px solid #fff;
       }
       &:focus {
         &::placeholder {
           opacity: 0;
         }
-        border-bottom: 0.5px solid #f3f2ef;
+        border-bottom: 1px solid #fff;
       }
 
     }
@@ -325,9 +328,9 @@
       width: 100%;
       font-size: 14px;
       line-height: 1.2;
-      border-bottom: 0.5px solid #f3f2ef;
+      border-bottom: 1px solid #fff;
       padding: 8px 0;
-      color: #f3f2ef;
+      color: #fff;
 
     }
   }
