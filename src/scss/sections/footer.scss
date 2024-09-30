@@ -193,7 +193,7 @@
     @include md {
       padding: 45px 27px;
     }
-    @media (max-height: 850px) {
+    @media (max-height: 800px) {
       padding: 25px 27px;
     }
     &::after {
@@ -388,10 +388,10 @@
 
   // .footer__logo
   &__logo {
-    max-width: 180px;
+    max-width: 115px;
     height: 100%;
-    @media (max-width: 380px) {
-      max-width: 80px;
+    @include md {
+      max-width: 60px;
     }
     img {
       width: 100%;

@@ -22,7 +22,9 @@
       max-width: 100%;
       height: auto;
     }
-
+    @media (max-width: 380px) {
+      height: 100%;
+    }
     &::after {
       content: "";
       background-image: url("../img/icons/gradient.png");
@@ -205,6 +207,7 @@
   justify-content: center;
   overflow: hidden;
   width: 100%;
+  position: relative;
   // @include lg {
   //   width: 100%;
   // }
@@ -216,8 +219,37 @@
   .swiper-button-next {
     cursor: pointer;
     display: none;
+    position: relative;
+    z-index: 2;
     @include md {
       display: block;
+    }
+  }
+  &::after {
+    @include md {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0) 70%, #000000 97.24%);
+
+      pointer-events: none;
+      z-index: 1;
+    }
+  }
+  &::before {
+    @include md {
+      content: "";
+      position: absolute;
+      right: 0px;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(270deg, rgba(0, 0, 0, 0) 70%, #000000 97.24%);
+      pointer-events: none;
+      z-index: 2;
     }
   }
 }
@@ -237,17 +269,7 @@
     // }
   }
 
-  &::after {
-    @include md {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 50%;
-      height: 100%;
-      // background: linear-gradient(90deg, rgba(151, 151, 151, 0.62) 0%, rgba(151, 151, 151, 0) 100%);
-    }
-  }
+
 }
 
 .paymentSwiper {
@@ -348,37 +370,6 @@
       }
     }
 
-    // .swiper-slide-prev & {
-    //   span {
-    //     @include md {
-    //       mask-image: url("../img/icons/title-bg.png");
-    //       mask-position: 110% 50%;
-    //       mask-repeat: no-repeat;
-    //       display: inline-block;
-    //     }
-
-    //   }
-    // }
-    // .swiper-slide-next &{
-    //   span {
-    //     @include md {
-    //       mask-image: url("../img/icons/title-bg.png");
-    //       mask-position: 110% 50%;
-    //       mask-repeat: no-repeat;
-    //       display: inline-block;
-    //     }
-
-    //   }
-    // }
-
-    // .swiper-slide-active & {
-    //   span {
-    //     @include md {
-    //       mask-image: none;
-    //     }
-
-    //   }
-    // }
 
     @keyframes shinePayment {
       0% {
