@@ -15,7 +15,7 @@ import { header } from "./components/header.js";
 import { global } from "./global.js";
 import { popups } from "./components/popups.js";
 import { tabPatment } from "./components/popupTab.js";
-
+import {forms} from "./components/forms.js"
 import { slides } from "./components/slides.js";
 import { masterplan } from "./sections/masterplan.js";
 import filter from "./sections/filter.js";
@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	popups();
 	tabPatment();
 	slides();
+	forms();
 
 	ScrollTrigger.config({
 		autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
