@@ -1,18 +1,22 @@
-export function forms() {
-  let popups = document.querySelectorAll('form[data-gtafg-submit]');
-  console.log(popups)
-  document.querySelector(".time-popup__form").addEventListener("submit", handleFormSubmit);
+/** @format */
 
-  async function handleFormSubmit(event) {
-    
+export function forms() {
+  const forms = document.querySelectorAll('form[data-gtag-submit="form"]');
+  console.log(forms);
+  forms.forEach((form, event) => {
+    form.addEventListener("submit", (event) => handleFormSubmit(form, event));
+
+  });
+
+  async function handleFormSubmit(el,event) {
     event.preventDefault();
 
-    const selects = document.querySelectorAll(".time-popup__form .dropdown-select");
+    const selects = el.querySelectorAll(".dropdown-select");
 
-    const firstName = document.querySelector('.time-popup__form input[name="name"]').value;
-    const lastName = document.querySelector('.time-popup__form input[name="lastname"]').value;
-    const email = document.querySelector('.time-popup__form input[name="email"]').value;
-    const phoneNumber = document.querySelector('.time-popup__form input[name="phone"]').value;
+    const firstName = el.querySelector('input[name="name"]').value;
+    const lastName = el.querySelector('input[name="lastname"]').value;
+    const email = el.querySelector('input[name="email"]').value;
+    const phoneNumber = el.querySelector('input[name="phone"]').value;
 
     const countryCode = selects[0].value;
 
@@ -20,6 +24,9 @@ export function forms() {
     document.getElementById("pasted_fields").value = combinedValue;
 
     const formData = new FormData(event.target);
+    console.log(event.target);
+    console.log('pf : ' + document.getElementById("pasted_fields"));
+
     try {
       const response = await fetch("https://form.sales-inquiries.ae/logger/form_receiver/", {
         method: "POST",
