@@ -10,6 +10,7 @@ import { viewerSwiper } from "./sections/swiper/viewerSwiper.js";
 import { popups } from "./sections/popups.js";
 import { floorplanTab } from "./sections/floorplanTab.js";
 import { removeClassToAlter } from "./sections/alter_parent_window.js";
+import { forms } from "./components/forms.js";
 
 plugins();
 
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
   floorplanTab();
   popups();
   setStylesForMediaCopyRight();
+  forms();
 });
 
 window.addEventListener('unload', function (event) {
