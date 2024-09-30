@@ -1,74 +1,131 @@
+import { queryMatches } from "../modules/functions.js"
 export function slides() {
 
-    // if (document.querySelector('.brochure__swiper')) {
-    //     new Swiper('.brochure__swiper', {
-    //         modules: [Autoplay, Navigation],
-    //         observer: true,
-    //         observeParents: true,
-    //         speed: 800,
-    //         autoplay: {
-    //             delay: 3000,
-    //             disableOnInteraction: false,
-    //         },
-    //     });
-    // }
+    const Mobile = queryMatches(767.98, "max");
+    const Desktop = queryMatches(768, "min");
 
-    const paymentSwipers = document.querySelectorAll('.paymentSwiper.swiper')
-
-    if (paymentSwipers.length > 0) {
-        paymentSwipers.forEach((el,index) => {
-            const nextButton = document.querySelectorAll(".swiper-button-next")[index];
-            const prevButton = document.querySelectorAll(".swiper-button-prev")[index];
-
-            new Swiper(el, {
-                modules: [ Navigation],
+    let thumbSwiper = new Swiper(".paymentSwiperThumb", {
+        modules: [Navigation, Controller],
+        slidesPerView: "auto",
+        centeredSlides: true,
+        // loop: true,
+        // loopAdditionalSlides: 6,
+        breakpoints: {
+            0: {
+                spaceBetween: 18,
+            },
+            767: {
+                // spaceBetween: 30,
+            },
+            992: {
+                centeredSlides: false,
                 slidesPerView: 3,
                 spaceBetween: 50,
-                freeMode: true, 
-                breakpoints: {
-                    300: {
-                        slidesPerView: 1.5,
-                        spaceBetween: 18,
-                    },
-                    767: {
-                        sslidesPerView: 1.5,
-                        spaceBetween: 30,
-                    },
-                    992: {
-                        slidesPerView: 3,
-                        spaceBetween: 50,
-                    },
-                },
-                navigation: {
-                    nextEl: nextButton,
-                    prevEl: prevButton,
-                },
-            });
+            },
+        },
+        navigation: {
+            nextEl: document.querySelector('.swiper-button-next'),
+            prevEl: document.querySelector('.swiper-button-prev'),
+        },
+    });
+
+    thumbSwiper.slideTo(1)
+
+    let mainSwiper = new Swiper(".paymentSwiper", {
+        modules: [Controller, EffectFade, Thumbs],
+        spaceBetween: 10,
+        slidesPerView: 1,
+        watchSlidesProgress: true,
+        allowTouchMove: false,
+        effect: "fade",
+        thumbs: {
+            swiper: thumbSwiper,
+        }
+    });
+
+    if (Desktop) {
+        let mainSwiper = new Swiper(".paymentSwiper", {
+            modules: [Controller, EffectFade, Thumbs],
+            spaceBetween: 10,
+            slidesPerView: 1,
+            watchSlidesProgress: true,
+            allowTouchMove: false,
+            effect: "fade",
+            thumbs: {
+                swiper: thumbSwiper,
+            }
         });
     }
 
-    // if (document.querySelector('.paymentSwiper')) {
-    //     new Swiper('.paymentSwiper', {
-    //         modules: [ Navigation],
-    //         observer: true,
-    //         observeParents: true,
-    //         slidesPerView: 3,
-            
+
+
+    if (Mobile) {
+        let mainSwiper = new Swiper(".paymentSwiper", {
+            modules: [Controller, EffectFade, Thumbs],
+            spaceBetween: 10,
+            slidesPerView: 1,
+            watchSlidesProgress: true,
+            allowTouchMove: false,
+            effect: "fade",
+        });
+        thumbSwiper.controller.control = mainSwiper;
+        mainSwiper.controller.control = thumbSwiper;
+        
+        mainSwiper.slideTo(1)
+
+    }
+
+
+    // document.querySelectorAll('.paymentSwiperThumb').forEach((swiperEl, index) => {
+    //     let thumbSwiper = new Swiper(swiperEl, {
+    //         modules: [Navigation, EffectCoverflow],
+    //         // effect: "coverflow",
+    //         slidesPerView: "auto",
+    //         centeredSlides: true,
+    //         loop: true,
+    //         loopAdditionalSlides: 6,
+    //         // watchSlidesProgress: true,
+    //         // spaceBetween: 50,
+    //         // loop: true,
+    //         // coverflowEffect: {
+    //         //     rotate: 0,
+    //         //     stretch: 0,
+    //         //     depth: 0,
+    //         //     modifier: 0,
+    //         //     slideShadows: false,
+    //         // },
     //         breakpoints: {
-    //             300: {
-    //                 slidesPerView: 1,
+    //             0: {
+    //                 spaceBetween: 18,
     //             },
     //             767: {
-    //                 slidesPerView: 2,
+    //                 // spaceBetween: 30,
     //             },
     //             992: {
+    //                 centeredSlides: false,
     //                 slidesPerView: 3,
+    //                 spaceBetween: 50,
     //             },
     //         },
     //         navigation: {
-    //             nextEl: ".swiper-button-next",
-    //             prevEl: ".swiper-button-prev",
+    //             nextEl: document.querySelector('.swiper-button-next'),
+    //             prevEl: document.querySelector('.swiper-button-prev'),
     //         },
     //     });
-    // }
+
+    //     let mainSwiper = document.querySelectorAll('.paymentSwiper')[index];
+
+    //     new Swiper(mainSwiper, {
+    //         modules: [Thumbs, EffectFade],
+    //         spaceBetween: 10,
+    //         slidesPerView: 1,
+    //         watchSlidesProgress: true,
+    //         allowTouchMove: false,
+    //         effect: "fade",
+    //         thumbs: {
+    //             swiper: thumbSwiper,
+    //         },
+    //     });
+    // });
+
 }

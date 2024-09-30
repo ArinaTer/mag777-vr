@@ -15,6 +15,10 @@ export function isWebp() {
 	});
 }
 
+export function queryMatches(width, prefix = 'max') {
+    return window.matchMedia(`(${prefix}-width: ${width}px)`).matches;
+}
+
 export function removeClasses(array, className) {
 	array.forEach((currentEl) => {
 		currentEl.classList.remove(className);

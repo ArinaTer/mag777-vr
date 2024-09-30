@@ -5,7 +5,8 @@ import { Draggable } from "gsap/Draggable.js";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin.js";
 import { CSSRulePlugin } from "gsap/CSSRulePlugin.js"
 import Splitting from "splitting";
-import Swiper, { Autoplay, Pagination, EffectFade, Navigation } from "swiper";
+import Swiper from "swiper";
+import  { Autoplay, Pagination, EffectFade, Navigation, Controller ,Thumbs , EffectCoverflow } from "swiper";
 import { Fancybox } from "@fancyapps/ui";
 import { Panzoom } from "@fancyapps/ui/dist/panzoom/panzoom.esm.js";
 import { Toolbar } from "@fancyapps/ui/dist/panzoom/panzoom.toolbar.esm.js";
@@ -33,6 +34,12 @@ export function plugins() {
 	window.Autoplay = Autoplay;
 	window.Pagination = Pagination;
 	window.EffectFade = EffectFade;
+	window.Controller = Controller;
+	window.Thumbs = Thumbs;
+	window.EffectCoverflow = EffectCoverflow;
+
+
+
 	// window.Navigation = Navigation;
 	// window.Lenis = Lenis;
 }

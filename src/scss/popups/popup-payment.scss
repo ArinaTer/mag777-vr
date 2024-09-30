@@ -20,7 +20,7 @@
 
     @include lg {
       max-width: 100%;
-      height: 100%;
+      height: auto;
     }
 
     &::after {
@@ -126,7 +126,7 @@
       justify-content: flex-start;
       align-items: center;
       gap: 35px;
-      height: 100%;
+      height: auto;
     }
   }
 
@@ -205,34 +205,60 @@
   justify-content: center;
   overflow: hidden;
   width: 100%;
-  @include md {
-    overflow: auto;
-    justify-content: flex-start;
-    width: 100%;
-    padding-bottom: 20px;
-  }
-  .paymentSwiper {
-    // width: 70%;
-    display: flex;
-    gap: 50px;
-    @include md {
-      gap: 18px;
-    }
+  // @include lg {
+  //   width: 100%;
+  // }
+  .swiper-wrapper {
+    // width: min-content;
   }
 
   .swiper-button-prev,
   .swiper-button-next {
     cursor: pointer;
     display: none;
-    @include lg {
+    @include md {
       display: block;
     }
   }
+}
 
-  &-slide {
-    @media (max-width: 767px) {
-      width: auto !important  ;
+.paymentSwiperThumb {
+  width: 70%;
+  position: relative;
+  @include md {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 20px;
+  }
+
+  .swiper-slide {
+    width: auto !important;
+    // @include md {
+    // }
+  }
+
+  &::after {
+    @include md {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      // background: linear-gradient(90deg, rgba(151, 151, 151, 0.62) 0%, rgba(151, 151, 151, 0) 100%);
     }
+  }
+}
+
+.paymentSwiper {
+  .swiper-slide {
+    opacity: 0 !important;
+    @include md {
+      width: auto;
+    }
+  }
+  .swiper-slide-active {
+    opacity: 1 !important;
   }
 }
 
@@ -276,7 +302,6 @@
       transition: all 0.3s;
       @include md {
         font-size: 16px;
-        width: max-content;
       }
     }
 
@@ -298,16 +323,62 @@
       transition: all 0.5s;
     }
 
-    &.active {
-      span {
-        color: #fff;
-      }
+    @media (max-width: 767.98px) {
+      .swiper-slide-active & {
+        span {
+          color: #fff;
+        }
 
-      &::after {
-        width: 100%;
-        animation: shinePayment 2s linear infinite alternate-reverse backwards;
+        &::after {
+          width: 100%;
+          animation: shinePayment 2s linear infinite alternate-reverse backwards;
+        }
       }
     }
+    @media (min-width: 768px) {
+      .swiper-slide-thumb-active & {
+        span {
+          color: #fff;
+        }
+
+        &::after {
+          width: 100%;
+          animation: shinePayment 2s linear infinite alternate-reverse backwards;
+        }
+      }
+    }
+
+    // .swiper-slide-prev & {
+    //   span {
+    //     @include md {
+    //       mask-image: url("../img/icons/title-bg.png");
+    //       mask-position: 110% 50%;
+    //       mask-repeat: no-repeat;
+    //       display: inline-block;
+    //     }
+
+    //   }
+    // }
+    // .swiper-slide-next &{
+    //   span {
+    //     @include md {
+    //       mask-image: url("../img/icons/title-bg.png");
+    //       mask-position: 110% 50%;
+    //       mask-repeat: no-repeat;
+    //       display: inline-block;
+    //     }
+
+    //   }
+    // }
+
+    // .swiper-slide-active & {
+    //   span {
+    //     @include md {
+    //       mask-image: none;
+    //     }
+
+    //   }
+    // }
 
     @keyframes shinePayment {
       0% {
@@ -341,13 +412,10 @@
     gap: 35px;
     height: 100%;
     width: 100%;
-    display: none;
+    display: flex;
     @include md {
       gap: 25px;
       width: 100%;
-    }
-    &.active {
-      display: flex;
     }
   }
 }
