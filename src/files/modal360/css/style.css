@@ -1,6 +1,8 @@
-@import '../../fonts/Fabriga/stylesheet.css';
+/** @format */
 
-@import '../../fonts/Cinzel/stylesheet.css';
+@import "../../fonts/Fabriga/stylesheet.css";
+
+@import "../../fonts/Cinzel/stylesheet.css";
 
 * {
   padding: 0px;
@@ -3967,6 +3969,10 @@ main {
   width: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+}
+
+.iti input[type=tel] {
+  padding-left: 4px !important;
 }
 
 @media (min-width: 767.99px) {

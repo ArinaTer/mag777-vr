@@ -1,3 +1,5 @@
+/** @format */
+
 @import "var";
 @import "mixin";
 @import "fonts";
@@ -29,12 +31,10 @@ body {
   position: relative;
   @include fabrigaRegular;
 
-
   &::-webkit-scrollbar {
     -webkit-appearance: none;
     width: 0px;
   }
-
 
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -91,3 +91,7 @@ body {
 @import "sections/footer";
 @import "popups/popup";
 @import "sections/modal360";
+
+.iti input[type="tel"] {
+  padding-left: 4px !important;
+}
