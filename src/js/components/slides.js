@@ -118,6 +118,7 @@ if (Desktop) {
         modules: [Navigation, Controller], // Thumbs отключен
         slidesPerView: "auto",
         centeredSlides: true,
+        
         breakpoints: {
             0: {
                 spaceBetween: 18,
