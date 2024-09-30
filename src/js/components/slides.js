@@ -4,21 +4,92 @@ export function slides() {
     const Mobile = queryMatches(767.98, "max");
     const Desktop = queryMatches(768, "min");
 
-    let thumbSwiper = new Swiper(".paymentSwiperThumb", {
-        modules: [Navigation, Controller],
+    // let thumbSwiper = new Swiper(".paymentSwiperThumb", {
+    //     modules: [Navigation, Controller],
+    //     slidesPerView: "auto",
+    //     centeredSlides: true,
+    //     breakpoints: {
+    //         0: {
+    //             spaceBetween: 18,
+    //         },
+    //         767: {
+    //             // spaceBetween: 30,
+    //         },
+    //         992: {
+    //             centeredSlides: false,
+    //             slidesPerView: 3,
+    //             spaceBetween: 50,
+    //         },
+    //     },
+    //     navigation: {
+    //         nextEl: document.querySelector('.swiper-button-next'),
+    //         prevEl: document.querySelector('.swiper-button-prev'),
+    //     },
+    // });
+
+    // thumbSwiper.slideTo(1)
+
+    // let mainSwiper = new Swiper(".paymentSwiper", {
+    //     modules: [Controller, EffectFade, Thumbs],
+    //     spaceBetween: 10,
+    //     slidesPerView: 1,
+    //     watchSlidesProgress: true,
+    //     allowTouchMove: false,
+    //     effect: "fade",
+    //     thumbs: {
+    //         swiper: thumbSwiper,
+    //     }
+    // });
+
+    // if (Desktop) {
+    //     let mainSwiper = new Swiper(".paymentSwiper", {
+    //         modules: [Controller, EffectFade, Thumbs],
+    //         spaceBetween: 10,
+    //         slidesPerView: 1,
+    //         watchSlidesProgress: true,
+    //         allowTouchMove: false,
+    //         effect: "fade",
+    //         thumbs: {
+    //             swiper: thumbSwiper,
+    //         }
+    //     });
+    // }
+
+
+
+    // if (Mobile) {
+    //     let mainSwiper = new Swiper(".paymentSwiper", {
+    //         modules: [Controller, EffectFade, Thumbs],
+    //         spaceBetween: 10,
+    //         slidesPerView: 1,
+    //         watchSlidesProgress: true,
+    //         allowTouchMove: false,
+    //         effect: "fade",
+    //     });
+    //     thumbSwiper.controller.control = mainSwiper;
+    //     mainSwiper.controller.control = thumbSwiper;
+        
+    //     mainSwiper.slideTo(1)
+
+    // }
+
+    let thumbSwiper;
+let mainSwiper;
+
+if (Desktop) {
+    // Инициализация для десктопа
+    thumbSwiper = new Swiper(".paymentSwiperThumb", {
+        modules: [Navigation],
         slidesPerView: "auto",
-        centeredSlides: true,
-        // loop: true,
-        // loopAdditionalSlides: 6,
+        centeredSlides: false,
         breakpoints: {
             0: {
                 spaceBetween: 18,
             },
             767: {
-                // spaceBetween: 30,
+                spaceBetween: 30,
             },
             992: {
-                centeredSlides: false,
                 slidesPerView: 3,
                 spaceBetween: 50,
             },
@@ -29,51 +100,55 @@ export function slides() {
         },
     });
 
-    thumbSwiper.slideTo(1)
-
-    let mainSwiper = new Swiper(".paymentSwiper", {
-        modules: [Controller, EffectFade, Thumbs],
+    mainSwiper = new Swiper(".paymentSwiper", {
+        modules: [EffectFade, Thumbs], // Controller отключен
         spaceBetween: 10,
         slidesPerView: 1,
         watchSlidesProgress: true,
         allowTouchMove: false,
         effect: "fade",
         thumbs: {
-            swiper: thumbSwiper,
+            swiper: thumbSwiper, // В десктопной версии активен Thumbs
         }
     });
 
-    if (Desktop) {
-        let mainSwiper = new Swiper(".paymentSwiper", {
-            modules: [Controller, EffectFade, Thumbs],
-            spaceBetween: 10,
-            slidesPerView: 1,
-            watchSlidesProgress: true,
-            allowTouchMove: false,
-            effect: "fade",
-            thumbs: {
-                swiper: thumbSwiper,
+} else if (Mobile) {
+    // Инициализация для мобильных устройств
+    thumbSwiper = new Swiper(".paymentSwiperThumb", {
+        modules: [Navigation, Controller], // Thumbs отключен
+        slidesPerView: "auto",
+        centeredSlides: true,
+        breakpoints: {
+            0: {
+                spaceBetween: 18,
+            },
+            767: {
+                spaceBetween: 30,
             }
-        });
-    }
+        },
+        navigation: {
+            nextEl: document.querySelector('.swiper-button-next'),
+            prevEl: document.querySelector('.swiper-button-prev'),
+        },
+    });
 
+    mainSwiper = new Swiper(".paymentSwiper", {
+        modules: [Controller, EffectFade], // Thumbs отключен
+        spaceBetween: 10,
+        slidesPerView: 1,
+        watchSlidesProgress: true,
+        allowTouchMove: false,
+        effect: "fade",
+    });
 
+    thumbSwiper.controller.control = mainSwiper;
+    mainSwiper.controller.control = thumbSwiper;
+}
 
-    if (Mobile) {
-        let mainSwiper = new Swiper(".paymentSwiper", {
-            modules: [Controller, EffectFade, Thumbs],
-            spaceBetween: 10,
-            slidesPerView: 1,
-            watchSlidesProgress: true,
-            allowTouchMove: false,
-            effect: "fade",
-        });
-        thumbSwiper.controller.control = mainSwiper;
-        mainSwiper.controller.control = thumbSwiper;
-        
-        mainSwiper.slideTo(1)
-
-    }
+// Вручную переключаем на слайд 1
+if (thumbSwiper && mainSwiper) {
+    thumbSwiper.slideTo(1);
+}
 
 
     // document.querySelectorAll('.paymentSwiperThumb').forEach((swiperEl, index) => {
