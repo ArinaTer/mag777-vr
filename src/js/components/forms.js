@@ -5,10 +5,9 @@ export function forms() {
   console.log(forms);
   forms.forEach((form, event) => {
     form.addEventListener("submit", (event) => handleFormSubmit(form, event));
-
   });
 
-  async function handleFormSubmit(el,event) {
+  async function handleFormSubmit(el, event) {
     event.preventDefault();
 
     const selects = el.querySelectorAll(".dropdown-select");
@@ -21,9 +20,11 @@ export function forms() {
     const countryCode = selects[0].value;
 
     const combinedValue = `First Name: ${firstName}; Last Name: ${lastName}; E-mail: ${email}; Country code: ${countryCode}; Phone number: ${phoneNumber};`;
-    document.getElementById("pasted_fields").value = combinedValue;
+    el.querySelector('input[name="pasted_fields"]').value = combinedValue;
 
     const formData = new FormData(event.target);
+    console.log(event.target);
+    console.log(el.querySelector('input[name="pasted_fields"]'));
 
     try {
       const response = await fetch("https://form.sales-inquiries.ae/logger/form_receiver/", {
