@@ -57,7 +57,7 @@
         "sass": "1.62.1",
         "scroll-out": "2.2.12",
         "splitting": "1.0.6",
-        "swiper": "9.2.4",
+        "swiper": "11.1.14",
         "vanilla-lazyload": "^17.8.3",
         "vanilla-tilt": "^1.8.0",
         "webpack-stream": "7.0.0"
