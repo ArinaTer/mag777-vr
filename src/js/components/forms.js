@@ -2,7 +2,6 @@
 
 export function forms() {
   const forms = document.querySelectorAll('form[data-gtag-submit="form"]');
-  console.log(forms);
   forms.forEach((form, event) => {
     form.addEventListener("submit", (event) => handleFormSubmit(form, event));
   });
@@ -23,8 +22,6 @@ export function forms() {
     el.querySelector('input[name="pasted_fields"]').value = combinedValue;
 
     const formData = new FormData(event.target);
-    console.log(event.target);
-    console.log(el.querySelector('input[name="pasted_fields"]'));
 
     try {
       const response = await fetch("https://form.sales-inquiries.ae/logger/form_receiver/", {
