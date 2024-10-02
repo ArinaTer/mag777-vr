@@ -15218,7 +15218,7 @@ function popups() {
     });
   });
 
-  const selectElement = document.querySelectorAll('.popup__form-select');
+  const selectElement = document.querySelectorAll('.form-select');
 	
 	selectElement.forEach(el => {
 		el.style.opacity = '0.45';

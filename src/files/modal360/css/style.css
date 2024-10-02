@@ -3425,7 +3425,7 @@ main {
   background-color: transparent;
   border-radius: 0;
   line-height: 24px;
-  padding-left: 4px;
+  padding-left: 0px;
 }
 
 .popup__form-input input:focus {
@@ -3492,6 +3492,8 @@ main {
   background-color: transparent;
   border-radius: 0;
   line-height: 24px;
+  padding-left: 2px;
+  font-size: 14px;
 }
 
 .popup__form-input select:focus {
@@ -3544,6 +3546,36 @@ main {
   line-height: 150%;
   text-transform: uppercase;
   overflow: hidden;
+}
+
+.popup select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+  outline: none;
+  border-radius: 0;
+}
+
+.popup .form-select {
+  position: relative;
+}
+
+.popup .form-select::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+      -ms-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  width: 5px;
+  height: 5px;
+  cursor: pointer;
 }
 
 .floorplan-popup .popup__tabs-btns {
@@ -3847,6 +3879,27 @@ main {
   fill: #fff;
 }
 
+.floorplan-popup .form-select {
+  position: relative;
+}
+
+.floorplan-popup .form-select::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+      -ms-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+  background-color: transparent;
+  border-width: 1px;
+  border-color: transparent #000 #000 transparent !important;
+  border-style: solid;
+  width: 5px;
+  height: 5px;
+  cursor: pointer;
+}
+
 .info-popup .popup__btn-close-first {
   -webkit-filter: invert(1);
           filter: invert(1);
@@ -3969,6 +4022,27 @@ main {
   width: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+}
+
+.info-popup .form-select {
+  position: relative;
+}
+
+.info-popup .form-select::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+      -ms-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+  background-color: transparent;
+  border-width: 1px;
+  border-color: transparent #fff #fff transparent !important;
+  border-style: solid;
+  width: 5px;
+  height: 5px;
+  cursor: pointer;
 }
 
 .iti input[type=tel] {
@@ -4167,7 +4241,7 @@ main {
   }
 
   .popup__form-input input {
-    padding-left: 4px;
+    padding-left: 0px;
   }
 
   .floorplan-popup .popup__tabs-btns {
@@ -4314,6 +4388,10 @@ main {
   .floorplan-popup .popup__form-btn span {
     color: #000;
     font-weight: 300;
+  }
+
+  .floorplan-popup .form-select::after {
+    border-color: transparent #fff #fff transparent !important;
   }
 
   .info-popup .popup__btn-close-first {

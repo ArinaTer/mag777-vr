@@ -371,7 +371,7 @@
       color: #000;
       border-radius: 0;
       font-size: 14px;
-      padding-left: 4px;
+      padding-left: 0px;
       @include md {
         padding-left: 0px;
       }
@@ -430,9 +430,21 @@
       padding: 10px 0 8px;
       color: #000;
       font-size: 14px;
+      padding-left: 2px;
+
       @include md {
         color: #FFF;
         border-bottom: 1px solid #fff;
+      }
+    }
+  }
+
+  .form-select {
+    &::after {
+      content: "";
+      border-color: transparent #000 #000 transparent;
+      @include md {
+        border-color: transparent #fff #fff transparent;
       }
     }
   }
