@@ -53,7 +53,7 @@ export function popups() {
 		  // Toggle: close the currently opened modal
 		  if (currentModal.classList.contains("popup-show")) {
 			currentModal.classList.remove("popup-show");
-			document.documentElement.classList.remove("popup-show");
+			// document.documentElement.classList.remove("popup-show");
 			el.classList.remove("_active");
 			currentModal = null;
 			currentBtn = null;
@@ -61,14 +61,14 @@ export function popups() {
 			// console.log('111');
 		  } else {
 			currentModal.classList.add("popup-show");
-			document.documentElement.classList.add("popup-show");
+			// document.documentElement.classList.add("popup-show");
 			el.classList.add("_active");
 		  }
 		} else {
 		  document.body.classList.add(toOpen.slice(1));
 		  document.body.classList.remove("open-menu");
 		  newModal.classList.add("popup-show");
-		  document.documentElement.classList.add("popup-show");
+		//   document.documentElement.classList.add("popup-show");
 		  el.classList.add("_active");
 		  currentModal = newModal;
 		  currentBtn = el;
