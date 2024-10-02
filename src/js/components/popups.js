@@ -1,6 +1,8 @@
 export function popups() {
 let selects = document.querySelectorAll('.dropdown-select');
-let selectForms = document.querySelectorAll('.popup__form-select')
+let selectForms = document.querySelectorAll('.form-select')
+console.log(selectForms);
+
 	fetch('https://form.sales-inquiries.ae/api/forms/country/info/', {
 		headers: { Accept: 'application/json' }
 	  })

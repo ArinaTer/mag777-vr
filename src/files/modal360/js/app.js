@@ -15158,6 +15158,30 @@ function viewerSwiper() {
 core.use([Pagination]);
 
 function popups() {
+
+  let selects = document.querySelectorAll('.dropdown-select');
+  let selectForms = document.querySelectorAll('.form-select')
+    fetch('https://form.sales-inquiries.ae/api/forms/country/info/', {
+      headers: { Accept: 'application/json' }
+      })
+      .then(response => response.json())
+      .then(data => {
+        selects.forEach((select,i) => {
+          let options = select.querySelectorAll('option');
+          selectForms[i].style.opacity='1';
+          options.forEach(option => {
+            if (option.value.startsWith(data.country)) { 
+              option.selected = true;
+              option.click();
+              }
+          });
+          }); 
+      })
+      .catch(error => {
+        console.error('Error:', error); 
+      });
+
+
   const popupOpenBtns = document.querySelectorAll('[data-open-popup]');
   const closePopupBtns = document.querySelectorAll('[data-close]');
   const activeClassForBtn = '_active';
@@ -15269,7 +15293,6 @@ function floorplanTab() {
 
 function forms_forms() {
   const forms = document.querySelectorAll('form[data-gtag-submit="form"]');
-  console.log(forms);
   forms.forEach((form, event) => {
     form.addEventListener("submit", (event) => handleFormSubmit(form, event));
   });
@@ -15290,8 +15313,6 @@ function forms_forms() {
     el.querySelector('input[name="pasted_fields"]').value = combinedValue;
 
     const formData = new FormData(event.target);
-    console.log(event.target);
-    console.log(el.querySelector('input[name="pasted_fields"]'));
 
     try {
       const response = await fetch("https://form.sales-inquiries.ae/logger/form_receiver/", {
