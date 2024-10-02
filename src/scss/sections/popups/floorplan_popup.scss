@@ -242,7 +242,6 @@
       width: 100%;
     }
 
-
     // .popup__tab-img
     &__tab-img {
       img {
@@ -293,7 +292,6 @@
         }
       }
     }
-
 
     // .popup__form-input
     &__form-input {
@@ -358,7 +356,18 @@
       background: #000;
       @media (max-width: 767.98px) {
         margin: 35px auto 0;
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.17) 100%), linear-gradient(0deg, #ffffff, #ffffff), linear-gradient(272.73deg, rgba(255, 255, 255, 0.5) -0.15%, rgba(223, 223, 223, 0.5) 45.81%), #ffffff;
+        background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.17) 100%
+          ),
+          linear-gradient(0deg, #ffffff, #ffffff),
+          linear-gradient(
+            272.73deg,
+            rgba(255, 255, 255, 0.5) -0.15%,
+            rgba(223, 223, 223, 0.5) 45.81%
+          ),
+          #ffffff;
       }
 
       span {
@@ -383,6 +392,29 @@
             width: 48px;
           }
         }
+      }
+    }
+  }
+
+  .form-select {
+    position: relative;
+  
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 5px;
+      transform: translateY(-50%) rotate(45deg);
+      background-color: transparent;
+      border-width: 1px;
+      border-color: transparent #000 #000 transparent !important;
+      border-style: solid;
+      width: 5px;
+      height: 5px;
+      cursor: pointer;
+
+      @media (max-width: 767.98px) {
+        border-color: transparent #fff #fff transparent !important;
       }
     }
   }

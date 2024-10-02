@@ -177,9 +177,9 @@
       background-color: transparent;
       border-radius: 0;
       line-height: 24px;
-      padding-left: 4px;
+      padding-left: 0px;
         @media (max-width: 767.98px) {
-          padding-left: 4px;
+          padding-left: 0px;
         }
 
       &:focus {
@@ -206,6 +206,8 @@
       background-color: transparent;
       border-radius: 0;
       line-height: 24px;
+      padding-left: 2px;
+      font-size: 14px;
       &:focus {
         border: none;
         box-shadow: none;
@@ -256,6 +258,35 @@
           width: 48px;
         }
       }
+    }
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background: transparent;
+    outline: none;
+    border-radius: 0;
+  }
+
+  .form-select {
+    position: relative;
+  
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 5px;
+      transform: translateY(-50%) rotate(45deg);
+      background-color: transparent;
+      border-width: 1px;
+      // border-color: transparent #fff #fff transparent;
+      border-style: solid;
+      width: 5px;
+      height: 5px;
+      cursor: pointer;
     }
   }
 }

@@ -188,6 +188,8 @@
       }
     }
 
+
+    
     // .popup__form-btn
     &__form-btn {
       background: linear-gradient(
@@ -236,6 +238,26 @@
           }
         }
       }
+    }
+
+  }
+
+  .form-select {
+    position: relative;
+  
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 5px;
+      transform: translateY(-50%) rotate(45deg);
+      background-color: transparent;
+      border-width: 1px;
+      border-color: transparent #fff #fff transparent !important;
+      border-style: solid;
+      width: 5px;
+      height: 5px;
+      cursor: pointer;
     }
   }
 }
