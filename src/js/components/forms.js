@@ -2,7 +2,6 @@
 
 export function forms() {
   const forms = document.querySelectorAll('form[data-gtag-submit="form"]');
-  console.log(forms);
   forms.forEach((form, event) => {
     form.addEventListener("submit", (event) => handleFormSubmit(form, event));
 

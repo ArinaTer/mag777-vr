@@ -1,4 +1,26 @@
 export function popups() {
+let selects = document.querySelectorAll('.dropdown-select');
+let selectForms = document.querySelectorAll('.popup__form-select')
+	fetch('https://form.sales-inquiries.ae/api/forms/country/info/', {
+		headers: { Accept: 'application/json' }
+	  })
+		.then(response => response.json())
+		.then(data => {
+			selects.forEach((select,i) => {
+				let options = select.querySelectorAll('option');
+				selectForms[i].style.opacity='1';
+				options.forEach(option => {
+					if (option.value.startsWith(data.country)) { 
+						option.selected = true;
+						option.click();
+					  }
+				});
+			  }); 
+		})
+		.catch(error => {
+		  console.error('Error:', error); 
+		});
+	  
 	// const popups = gsap.utils.toArray('.popup');
 	// const popupCloseBtns = gsap.utils.toArray('[data-close-popup]');
 	// const popupOpenBtns = gsap.utils.toArray('[data-open-popup]');
