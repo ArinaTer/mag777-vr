@@ -3558,6 +3558,10 @@ main {
   border-radius: 0;
 }
 
+.popup select option {
+  color: #000;
+}
+
 .popup .form-select {
   position: relative;
 }
