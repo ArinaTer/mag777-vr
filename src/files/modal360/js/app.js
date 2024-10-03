@@ -15306,10 +15306,11 @@ function forms_forms() {
     const lastName = el.querySelector('input[name="lastname"]').value;
     const email = el.querySelector('input[name="email"]').value;
     const phoneNumber = el.querySelector('input[name="phone"]').value;
-
+    const isAgent = el.querySelector('input[name="isAgent"]:checked').value;
+    
     const countryCode = selects[0].value;
 
-    const combinedValue = `First Name: ${firstName}; Last Name: ${lastName}; E-mail: ${email}; Country code: ${countryCode}; Phone number: ${phoneNumber};`;
+    const combinedValue = `First Name: ${firstName}; Last Name: ${lastName}; E-mail: ${email}; Country code: ${countryCode}; Phone number: ${phoneNumber}; Are you agent: ${isAgent};`;
     el.querySelector('input[name="pasted_fields"]').value = combinedValue;
 
     const formData = new FormData(event.target);
