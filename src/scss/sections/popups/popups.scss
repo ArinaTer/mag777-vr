@@ -4,7 +4,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
+  height: var(--vh);
   width: 100%;
   transition: visibility 0.8s ease 0s;
   visibility: hidden;
@@ -33,7 +33,7 @@
   &__wrapper {
     position: relative;
     z-index: 1;
-    height: 100vh;
+    height: var(--vh);
     width: 100%;
     max-width: 635px;
     transform: translateX(100%);
