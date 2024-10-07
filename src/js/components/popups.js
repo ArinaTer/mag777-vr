@@ -45,19 +45,6 @@ let selectForms = document.querySelectorAll('.form-select')
 	// 	});
 	// });
 
-	const selectElement = document.querySelectorAll('.form-select');
-	
-	selectElement.forEach(el => {
-		el.style.opacity = '0.45';
-		
-		el.addEventListener('change', function() {
-		  if (el.value !== "Country Code") {
-			el.style.opacity = '1';
-		  } else {
-			el.style.opacity = '0.45';
-		  }
-		});
-	});
 
 
   
