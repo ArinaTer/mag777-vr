@@ -30312,7 +30312,7 @@ function global() {
 
   const gsapOBserver = Observer.create({
     target: ".main",
-    type: "wheel,touch,pointer",
+    type: "wheel,touch",
     tolerance: 100,
     onUp: () => {
       if (scrollTop) {
