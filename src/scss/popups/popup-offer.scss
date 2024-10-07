@@ -47,6 +47,9 @@
       justify-content: center;
       gap: 19px;
     }
+    @media (max-width: 400px) {
+      gap: 8px;
+    }
   }
 
   &__even {
@@ -476,6 +479,9 @@
       margin: 25px auto 0;
       background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.17) 100%), #FFFFFF;
     }
+    @media (max-width: 400px) {
+      margin: 15px auto 10px;
+    }
 
     span {
       color: #fff;
@@ -502,6 +508,9 @@
     transition-delay: 0.5s;
     @include md {
       transition-delay: 0.3s;
+      height: 35%;
+    }
+    @media (max-width: 400px) {
       height: 35%;
     }
     &-img {
@@ -532,6 +541,9 @@
       height: 60%;
       transition-delay: 0.4s;
       transform: translateY(0%);
+    }
+    @media (max-width: 400px) {
+      height: 65%;
     }
 
   }

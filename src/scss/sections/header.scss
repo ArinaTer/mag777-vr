@@ -195,19 +195,26 @@
     width: 16px;
     height: 16px;
     position: relative;
+
     @media (min-width: 1920px) {
       width: 20px;
       height: 20px;
     }
     @media (min-width: 992px) {
       &:hover {
-        .header__popover-tg,
+        
+        .header__popover-inst,
         .header__popover-wp {
           opacity: 1;
-          transform: translateY(0%);
+          transform: translateY(0%) translateX(0%);
+        }
+        .header__popover-tg {
+          opacity: 1;
+          transform: translateY(0%) translateX(50%);
         }
       }
     }
+
   }
 
   //.header__popover-tg
@@ -218,11 +225,43 @@
     text-decoration-line: none;
     position: absolute;
     top: 36px;
+    right: 9px;
+    border-radius: 4px;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(20%) translateX(50%);
+    transition: all 0.5s;
+    pointer-events: none;
+    @media (min-width: 1920px) {
+      font-size: 14px;
+    }
+
+    &::after {
+      content: "";
+      background-image: url("https://d3b6muno9lbfvx.cloudfront.net/mag777-vr/img/header/arrow-popover.svg");
+      position: absolute;
+      top: -3px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-repeat: no-repeat;
+      width: 25px;
+      height: 6px;
+    }
+  }
+
+  //.header__popover-inst
+  &__popover-inst {
+    background-color: #fff;
+    padding: 5px 13px;
+    color: rgba(0, 0, 0, 1);
+    text-decoration-line: none;
+    position: absolute;
+    top: 36px;
     right: -9px;
     border-radius: 4px;
     font-size: 14px;
     opacity: 0;
-    transform: translateY(20%);
+    transform: translateY(20%) translateX(0%);
     transition: all 0.5s;
     pointer-events: none;
     @media (min-width: 1920px) {
@@ -668,7 +707,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
+    flex-wrap: wrap;
   }
 
   // .header-menu__contact-link
@@ -683,6 +723,11 @@
       font-size: 12px;
       line-height: 210.2%;
       color: #fff;
+    }
+    img {
+      width: 20px;
+      height: 20px;
+      object-fit: cover;
     }
   }
 }
