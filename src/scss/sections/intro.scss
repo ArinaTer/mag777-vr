@@ -28,7 +28,11 @@
       left: auto;
       transform: initial;
       margin: 0 auto;
+    }
+
+    @include md {
       height: 80px;
+
     }
     img {
       position: absolute;
@@ -45,6 +49,20 @@
       opacity: 0 !important;
       visibility: hidden;
       transform: all 1s;
+    }
+
+    &-dev {
+      display: block;
+      .mobile-detected & {
+        display: none;
+      }
+    }
+
+    &-mob {
+      display: none;
+      .mobile-detected & {
+        display: block;
+      }
     }
   }
 
