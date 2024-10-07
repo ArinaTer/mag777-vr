@@ -3267,6 +3267,8 @@ main {
   display: none;
 }
 
+/** @format */
+
 .popup {
   position: fixed;
   top: 0;
@@ -3580,6 +3582,100 @@ main {
   width: 5px;
   height: 5px;
   cursor: pointer;
+}
+
+.popup .form-switch {
+  margin-top: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 4px;
+}
+
+.popup .form-switch p {
+  color: #888;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 171.429%;
+}
+
+.popup .form-switch__wrapper {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 144px;
+  height: 28px;
+  width: 100%;
+  border-radius: 6.957px;
+  border: 0.696px solid #5a5554;
+  padding: 3px;
+}
+
+.popup .form-switch__item {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popup .form-switch__item input {
+  display: none;
+}
+
+.popup .form-switch__item label {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #888;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 100%;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.popup .form-switch__item input:checked + label {
+  background: #fff;
+  color: #252525;
+}
+
+.popup .form-switch.active p {
+  color: #fff;
+}
+
+.floorplan-popup .form-switch__item input:checked + label {
+  background: #040404;
+  color: #fff;
 }
 
 .floorplan-popup .popup__tabs-btns {
@@ -4078,6 +4174,18 @@ main {
 
   .active-ext-slides .viewer__btn-swap_int {
     pointer-events: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .popup .form-switch__wrapper {
+    height: 32px;
+    padding: 3px 3px 2px;
+  }
+
+  .floorplan-popup .form-switch__item input:checked + label {
+    background: #fff;
+    color: #252525;
   }
 }
 
