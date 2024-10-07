@@ -1715,7 +1715,6 @@ body::-webkit-scrollbar {
       -ms-transform: initial;
           transform: initial;
   margin: 0 auto;
-  height: 80px;
 }
 
 .intro__qrcode img {
@@ -1733,6 +1732,22 @@ body::-webkit-scrollbar {
   -webkit-transform: all 1s;
       -ms-transform: all 1s;
           transform: all 1s;
+}
+
+.intro__qrcode-dev {
+  display: block;
+}
+
+.mobile-detected .intro__qrcode-dev {
+  display: none;
+}
+
+.intro__qrcode-mob {
+  display: none;
+}
+
+.mobile-detected .intro__qrcode-mob {
+  display: block;
 }
 
 .intro__bg {
@@ -6616,6 +6631,10 @@ body::-webkit-scrollbar {
 
   .header-menu__form-button {
     margin-top: 0px;
+  }
+
+  .intro__qrcode {
+    height: 80px;
   }
 
   .intro__qrcode img {
