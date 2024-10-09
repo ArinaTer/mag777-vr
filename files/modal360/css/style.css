@@ -2719,6 +2719,10 @@ html.with-fancybox body.hide-scrollbar {
      object-fit: contain;
 }
 
+:root {
+  --vh: 100dvh;
+}
+
 body {
   overflow: hidden;
 }
