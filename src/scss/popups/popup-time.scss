@@ -284,9 +284,12 @@
   // .time-popup__list
   &__list {
     width: 50%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    // grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: 1fr;
     @include md {
       display: flex;
       width: 100%;
