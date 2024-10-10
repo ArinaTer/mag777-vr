@@ -283,9 +283,9 @@
 
   // .time-popup__list
   &__list {
-    width: 70%;
+    width: 50%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     @include md {
       display: flex;
