@@ -118,7 +118,7 @@ if (Desktop) {
         modules: [Navigation, Controller], // Thumbs отключен
         slidesPerView: "auto",
         centeredSlides: true,
-        
+        autoHeight: true,
         breakpoints: {
             0: {
                 spaceBetween: 18,
@@ -137,6 +137,8 @@ if (Desktop) {
         modules: [Controller, EffectFade], // Thumbs отключен
         spaceBetween: 10,
         slidesPerView: 1,
+        autoHeight: true,
+
         watchSlidesProgress: true,
         allowTouchMove: false,
         effect: "fade",
