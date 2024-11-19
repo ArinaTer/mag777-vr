@@ -4733,7 +4733,7 @@ body::-webkit-scrollbar {
   transition: transform 0.5s, -webkit-transform 0.5s;
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
-  padding: 0 54px;
+  padding: 0 50px;
 }
 
 .payment-popup__list-item:nth-child(1)::after,
@@ -4755,13 +4755,18 @@ body::-webkit-scrollbar {
           transition-delay: 0s;
 }
 
+.payment-popup__list-item:nth-child(3) {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
 .payment-popup__list-item:nth-child(1) {
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
   padding-left: 0;
 }
 
-.payment-popup__list-item:nth-child(3) {
+.payment-popup__list-item:nth-child(4) {
   padding-right: 0;
 }
 
@@ -4774,12 +4779,25 @@ body::-webkit-scrollbar {
 }
 
 .payment-popup__list-item p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.22;
   text-transform: uppercase;
   color: #cfcfcf;
   text-align: center;
   font-family: "fabrigaLight", Arial, sans-serif;
+}
+
+.payment-popup__list-item-after::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 1px;
+  height: 75px;
+  background-color: #b8b8b8;
 }
 
 .payment__swiper {
@@ -4804,7 +4822,7 @@ body::-webkit-scrollbar {
 }
 
 .paymentSwiperThumb {
-  width: 70%;
+  width: 92%;
   position: relative;
 }
 
@@ -4920,6 +4938,14 @@ body::-webkit-scrollbar {
   display: flex;
 }
 
+.payment-popup.popup-show .payment-popup__list-item:nth-child(4) {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
 .payment-popup.popup-show .payment-popup__list-item:nth-child(3) {
   -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
@@ -4945,7 +4971,7 @@ body::-webkit-scrollbar {
 }
 
 .payment-popup.popup-show .payment-popup__list {
-  height: 135px;
+  height: 138px;
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
 }
@@ -6431,7 +6457,7 @@ body::-webkit-scrollbar {
 
   .payment-popup__wrapper {
     max-width: 100%;
-    height: auto;
+    height: 95%;
   }
 
   .payment-popup__inner {
@@ -6475,6 +6501,10 @@ body::-webkit-scrollbar {
   }
 
   .payment-popup__list-item:nth-child(2)::after {
+    display: none;
+  }
+
+  .payment-popup__list-item-after::after {
     display: none;
   }
 
@@ -7194,7 +7224,7 @@ body::-webkit-scrollbar {
   }
 
   .payment__tab-contant {
-    height: 100%;
+    height: auto;
   }
 
   .payment__tab-pane {
