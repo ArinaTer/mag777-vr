@@ -22,6 +22,7 @@ Use your mouse or touchscreen to navigate through the tour.
 Click on interactive elements to view additional information.
 
 📥 How to Download the Repository
+
 Clone the repository from the dev branch:
 
 git clone https://github.com/ArinaTer/mag777-vr.git
