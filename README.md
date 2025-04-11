@@ -26,9 +26,6 @@ Clone the repository to your local machine:
 
 git clone https://github.com/ArinaTer/mag777-vr.git
 
-Navigate to the project directory:
-
-cd business-bay-tower-360
 
 📦 Install Dependencies Ensure you have Node.js installed, then run:
 
